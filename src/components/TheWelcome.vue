@@ -6,10 +6,10 @@ import SupportIcon from './icons/IconSupport.vue'
 <template>
     <div class="bg-black text-white font-bold m-2 p-4 flex gap-2">
         <div>
-            Test Div
+            WHAT!!!!!!! GOES HARD!!!
         </div>
         <div>
-            Test Div
+            Test Div This is me
         </div>
         <div>
             Test Div
