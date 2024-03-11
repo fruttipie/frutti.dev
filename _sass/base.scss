@@ -25,7 +25,6 @@ body {
   padding: 0.75rem 1rem;
   color: $backgroundColor;
 
-
   &:hover {
     cursor: pointer;
   }
@@ -48,14 +47,14 @@ nav {
     text-align: center;
     list-style-type: none;
     text-align: center;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     
     li {
       font-size: 1.15rem;
-      margin: 0rem 0.25rem;
+      margin: 0rem 0.15rem;
       
       a {
         @include clickable;
@@ -80,7 +79,16 @@ nav {
           cursor: pointer;
         }
       }
+
+      .icon {
+        padding: 0.75rem 0.9rem; /* it only looks good if i do this... */
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
     }
+      
 
     .title {
       font-size: 1.75rem;

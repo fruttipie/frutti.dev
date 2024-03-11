@@ -27,7 +27,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 /* This SCSS file covers everything in the default layout */
@@ -58,14 +58,14 @@ nav ul {
   text-align: center;
   list-style-type: none;
   text-align: center;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
 }
 nav ul li {
   font-size: 1.15rem;
-  margin: 0rem 0.25rem;
+  margin: 0rem 0.15rem;
 }
 nav ul li a {
   border-radius: 0.5rem;
@@ -95,6 +95,12 @@ nav ul li button {
 nav ul li button:hover {
   background-color: #ce2f4e;
   cursor: pointer;
+}
+nav ul li .icon {
+  padding: 0.75rem 0.9rem; /* it only looks good if i do this... */
+}
+nav ul li .icon i {
+  font-size: 1.5rem;
 }
 nav ul .title {
   font-size: 1.75rem;
