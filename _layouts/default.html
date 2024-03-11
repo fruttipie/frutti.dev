@@ -9,25 +9,26 @@
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
-  <nav class = "navigation">
-    <ul class = "navLeft">
-      <li class="title" id="welcome">My Portfolio</li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li>
-        <button id="theme-toggle" class="theme-toggle">
-          <i id="sun" class="fa-regular fa-sun"></i>
-          <i id="moon"  class="fa-solid fa-moon hidden"></i>
-        </button>
-      </li>
-    </ul>
-      <ul class = "navRight">
-      <li><a href=#>LinkedIn</a></li>
-      <li><a href=#>Itch.io</a></li>
-    </ul>
-  </nav>
+  <body style="margin-top:5%"> <!--I wonder if there's a better way to add the space on top-->
+    <nav class = "navigation">
+      <ul class = "navLeft">
+        <li class="title" id="welcome">My Portfolio</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle">
+            <i id="sun" class="fa-regular fa-sun"></i>
+            <i id="moon"  class="fa-solid fa-moon hidden"></i>
+          </button>
+        </li>
+      </ul>
+        <ul class = "navRight">
+        <li><a href=#>LinkedIn</a></li>
+        <li><a href=#>Itch.io</a></li>
+      </ul>
+    </nav>
 
-  <body style="margin-top:65px"> <!--I wonder if there's a better way to add the space on top-->
     {{ content }}
   </body>
 

@@ -47,13 +47,19 @@ const welcomeMessages = [
     "// fix this later",
     "ouuughhhh",
     //"why do they call it the restroom?",
-    "glorp",
     "strange and weird",
     "made with Jekyll & Sass",
     "pad thai consumer",
     "made with ♡",
     "welcome to my sick site",
-    "<!-- What -->"
+    "<!-- What -->",
+    "fish can roll",
+    "Isaac and his Mother",
+    "+4 Mult",
+    "+2",
+    "html andy",
+    "8008",
+    "im a creep, im a weirdo"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
