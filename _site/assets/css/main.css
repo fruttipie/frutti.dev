@@ -1,39 +1,11 @@
-.games {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  align-items: center;
-  flex-flow: row wrap;
-}
-.games .game {
-  width: 25%;
-  min-width: 25%;
-  height: 25%;
-  margin: 1.5rem;
-  padding: 1rem;
-}
-.games .game img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 0.75rem;
-  transition: filter ease 0.1s;
-}
-.games .game img:hover {
-  filter: opacity(85%);
-  cursor: pointer;
-}
-.games .game figcaption {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
 /* This SCSS file covers everything in the default layout */
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  background: hsl(270, 6%, 13%);
 }
 
 body {
@@ -71,7 +43,7 @@ nav ul li a {
   border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color ease 0.1s;
+  transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
   color: #fafafa;
 }
@@ -90,14 +62,14 @@ nav ul li button {
   background-color: hsl(270, 6%, 13%);
   height: 49px;
   width: 49px;
-  transition: background-color ease 0.1s;
+  transition: background-color ease 0.2s;
 }
 nav ul li button:hover {
   background-color: #ce2f4e;
   cursor: pointer;
 }
 nav ul li .icon {
-  padding: 0.75rem 0.9rem; /* it only looks good if i do this... */
+  padding: 0.75rem 0.9rem;
 }
 nav ul li .icon i {
   font-size: 1.5rem;
@@ -105,21 +77,101 @@ nav ul li .icon i {
 nav ul .title {
   font-size: 1.75rem;
   font-weight: bold;
-  width: 20rem;
   text-align: center;
-  transition: color ease 0.1s;
   border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color ease 0.1s;
+  transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
   color: #fafafa;
 }
 nav ul .title:hover {
   cursor: pointer;
 }
-nav ul .title:hover {
-  color: #67d6ff;
+nav ul .title a {
+  transition: color ease 0.2s;
+}
+nav ul .title a:hover {
+  background-color: hsl(270, 6%, 13%);
+}
+nav ul #welcome {
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
+  color: #fafafa;
+}
+nav ul #welcome:hover {
+  cursor: pointer;
+}
+nav ul #welcome:hover {
+  background-color: #3dbceb;
+}
+nav .hamburger {
+  font-size: 1.5rem;
+  display: none;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.games .game {
+  width: 25%;
+  min-width: 300px;
+  height: 25%;
+  margin: 1rem;
+  padding: 1rem;
+}
+.games .game img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0.75rem;
+  transition: filter ease 0.1s;
+}
+.games .game img:hover {
+  filter: opacity(85%);
+  cursor: pointer;
+}
+.games .game figcaption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.games .game .longerTitle {
+  font-size: 1.25rem;
+}
+
+.aboutMe {
+  padding: 2rem;
+  list-style-type: none;
+  font-size: 2rem;
+}
+.aboutMe .customizable {
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
+  color: #fafafa;
+  background-color: #3dbceb;
+}
+.aboutMe .customizable:hover {
+  cursor: pointer;
+}
+.aboutMe li {
+  margin: 2rem;
+}
+.aboutMe li img {
+  max-width: 45%;
 }
 
 footer {
@@ -133,7 +185,7 @@ footer a {
   border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color ease 0.1s;
+  transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
   color: #fafafa;
 }
@@ -150,6 +202,35 @@ footer p {
 
 .hidden {
   display: none !important;
+}
+
+@media screen and (max-width: 1100px) {
+  #welcome {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav {
+    justify-content: center;
+  }
+  nav li:not(.title, .hamburger) {
+    display: none;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav .title {
+    font-size: 1rem;
+    min-width: 15rem;
+  }
+  .games {
+    flex-direction: column;
+  }
+  .games .game {
+    width: 80%;
+    min-width: 200px;
+    max-width: 30rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
