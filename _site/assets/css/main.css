@@ -124,7 +124,7 @@ nav .hamburger {
 }
 .games .game {
   width: 25%;
-  min-width: 300px;
+  min-width: 400px;
   height: 25%;
   margin: 1rem;
   padding: 1rem;
@@ -145,9 +145,7 @@ nav .hamburger {
   font-weight: bold;
   text-align: center;
   margin-top: 0.5rem;
-}
-.games .game .longerTitle {
-  font-size: 1.25rem;
+  white-space: nowrap;
 }
 
 .aboutMe {
@@ -179,7 +177,7 @@ footer {
   color: #fafafa;
   text-align: center;
   padding: 1.25rem;
-  margin: 1rem 0;
+  margin-top: 0.5rem 0;
 }
 footer a {
   border-radius: 0.5rem;
@@ -200,6 +198,11 @@ footer p {
   font-style: italic;
 }
 
+#backToTop {
+  display: none;
+  margin-bottom: 1rem;
+}
+
 .hidden {
   display: none !important;
 }
@@ -209,7 +212,7 @@ footer p {
     display: none;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   nav {
     justify-content: center;
   }
@@ -230,6 +233,9 @@ footer p {
     width: 80%;
     min-width: 200px;
     max-width: 30rem;
+  }
+  #backToTop {
+    display: block;
   }
 }
 
