@@ -42,7 +42,7 @@ themeToggle.addEventListener("click", toggleMode);
 // prefersDarkQuery.addEventListener("change", toggle);
 
 // Welcome/Title text messages:
- 
+
 const welcomeMessages = [
     "hello there!!",
     "welcome!!",
@@ -113,11 +113,24 @@ const updateInnerText = () => {
     const randomGreetingIndex = Math.floor(Math.random() * welcomeMessages.length);
     customGreetingEl.innerText = welcomeMessages[randomGreetingIndex];
 };
-  
+
 // addEventListener("load", updateInnerText); // this is for making the welcome text random on load
-  
+
 customGreetingEl.addEventListener("click", (e) => {
     e.preventDefault();
     console.info("Reloading");
     updateInnerText();
+});
+
+// Toggle between showing and hiding the navigation menu links
+// when the user clicks on the hamburger menu / bar icon
+function toggleHamburgerMenu() {
+    console.info("Flex")
+    document.getElementById("navLinkList").classList.toggle("flex");
+}
+
+addEventListener("resize", (e) => {
+    if (window.innerWidth > 1000) {
+        document.getElementById("navLinkList").classList.remove("flex");
+    }
 });

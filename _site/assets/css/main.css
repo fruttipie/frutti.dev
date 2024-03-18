@@ -114,6 +114,46 @@ nav .hamburger {
   font-size: 1.5rem;
   display: none;
 }
+nav .hamburger i:hover {
+  cursor: pointer;
+}
+
+#navLinkList {
+  display: none;
+  flex-direction: column;
+  background-color: hsl(270, 6%, 13%);
+  z-index: 3;
+  list-style: none;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 0;
+  max-width: 10rem;
+  justify-content: center;
+  position: fixed;
+  border-radius: 0 0 0.75rem 0;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.hamburgerLink a {
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
+  color: #fafafa;
+  font-size: 1.15rem;
+  line-height: 3em;
+  margin: 1rem;
+}
+.hamburgerLink a:hover {
+  cursor: pointer;
+}
+.hamburgerLink a:hover {
+  background-color: #ce2f4e;
+}
 
 .games {
   display: flex;
@@ -152,6 +192,8 @@ nav .hamburger {
   padding: 2rem;
   list-style-type: none;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .aboutMe .customizable {
   border-radius: 0.5rem;
@@ -161,6 +203,9 @@ nav .hamburger {
   padding: 0.75rem 1rem;
   color: #fafafa;
   background-color: #3dbceb;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 2em;
 }
 .aboutMe .customizable:hover {
   cursor: pointer;
@@ -170,6 +215,11 @@ nav .hamburger {
 }
 .aboutMe li img {
   max-width: 45%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0.75rem;
+  max-width: 300px;
 }
 
 footer {
@@ -214,9 +264,9 @@ footer p {
 }
 @media screen and (max-width: 1000px) {
   nav {
-    justify-content: center;
+    justify-content: flex-start;
   }
-  nav li:not(.title, .hamburger) {
+  nav li:not(.title, .hamburger, .hamburgerLink) {
     display: none;
   }
   nav .hamburger {
@@ -224,7 +274,8 @@ footer p {
   }
   nav .title {
     font-size: 1rem;
-    min-width: 15rem;
+    min-width: 12rem;
+    margin-left: 2rem;
   }
   .games {
     flex-direction: column;
@@ -233,6 +284,10 @@ footer p {
     width: 80%;
     min-width: 200px;
     max-width: 30rem;
+  }
+  .aboutMe {
+    flex-direction: column;
+    justify-content: center;
   }
   #backToTop {
     display: block;

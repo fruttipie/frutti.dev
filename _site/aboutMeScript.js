@@ -4,7 +4,7 @@ const aboutMeMessage1 = [
     "a game designer",
     "a digital artist",
     "a rogue-like fanatic",
-    "a game design student with a cs minor",
+    //"a game design student with a cs minor",
     "a cat lover",
     "a murloc enthusiast",
     "a full-time student",
@@ -15,15 +15,15 @@ const aboutMeMessage1 = [
     "a inagural SPARX intern",
     "a minecraft enjoyer",
     "an alien",
-    "a tainted lost player",
+    //"a tainted lost player",
     "a self-financed student",
-    "a hearthstone battlegrounds fiend",
-    "an unstoppable force"
+    "loves hearthstone battlegrounds",
+    //"an unstoppable force"
 ];
 
 const aboutMeMessage2 = [
     "loves pad thai",
-    "has 550+ hours in The Binding of Isaac",
+    //"has 550+ hours in The Binding of Isaac",
     "loves Peter the Ant Eater",
     "really appreciates you for stopping by",
     "dyes her hair a ton of colors",
@@ -41,8 +41,8 @@ const aboutMeMessage2 = [
     "loves parmesan cheese",
     "has had 10 jobs",
     "loves playing Captain Hoggar",
-    "used to tutor children on coding topics",
-    "is against an unmovable object"
+    "used to be a C++ tutor",
+    //"is against an unmovable object"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

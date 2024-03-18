@@ -130,6 +130,39 @@ nav {
   .hamburger {
     @include icon;
     display: none;
+    i:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+#navLinkList {
+  display: none;
+  flex-direction: column;
+  background-color: $bodyColor;
+  z-index: 3; // to make it be above the nav bar
+  list-style: none;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 0;
+  max-width: 10rem;
+  justify-content: center; // this is doing nothing???
+  position: fixed;
+  border-radius: 0 0 0.75rem 0;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.hamburgerLink a {
+  @include clickable;
+  font-size: 1.15rem;
+  line-height: 3em;
+  margin: 1rem;
+
+  &:hover {
+    background-color: $accentColor;
   }
 }
 
@@ -180,10 +213,15 @@ nav {
   padding: 2rem;
   list-style-type: none;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
 
   .customizable {
     @include clickable;
     background-color: $accentColor2;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    line-height: 2em;
   }
 
   li {
@@ -191,6 +229,11 @@ nav {
 
     img {
       max-width: 45%;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 0.75rem;
+      max-width: 300px;
     }
   }
 }
@@ -235,9 +278,10 @@ footer {
 
 @media screen and (max-width: 1000px) {
   nav {
-    justify-content: center;
+    justify-content: flex-start;
     
-    li:not(.title, .hamburger) {
+    
+    li:not(.title, .hamburger, .hamburgerLink) {
       display: none;
     }
 
@@ -247,7 +291,8 @@ footer {
 
     .title {
       font-size: 1rem;
-      min-width: 15rem;
+      min-width: 12rem;
+      margin-left: 2rem;
     }
   }
 
@@ -259,6 +304,11 @@ footer {
       min-width: 200px;
       max-width: 30rem;
     }
+  }
+
+  .aboutMe {
+    flex-direction: column;
+    justify-content: center;
   }
 
   #backToTop {
