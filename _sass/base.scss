@@ -218,11 +218,11 @@ nav {
 
 
   .game {
-    width: 25%;
+    max-width: 30%;
     min-width: 400px;
     height: 25%;
     // margin: 1rem;
-    padding: 1rem;
+    margin: 1rem;
   
     img {
       @include borderRadius();
@@ -421,17 +421,15 @@ footer {
     .title {
       font-size: 1rem;
       min-width: 12rem;
-      margin-left: 5rem;
     }
   }
 
-  .games {
+  .homePageGames {
     flex-direction: column;
 
     .game {
-      width: 80%;
       min-width: 200px;
-      max-width: 30rem;
+      max-width: 60%;
     }
   }
 
@@ -477,5 +475,20 @@ footer {
 
   #bottomLinks {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homePageGames {
+    .game {
+      min-width: 200px;
+      max-width: inherit;
+    }
+  }
+
+  .topContainer {
+    .gameTitle {
+      font-size: 3rem;
+    }
   }
 }

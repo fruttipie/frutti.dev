@@ -211,10 +211,10 @@ nav .hamburger i:hover {
   margin: 2rem;
 }
 .homePageGames .game {
-  width: 25%;
+  max-width: 30%;
   min-width: 400px;
   height: 25%;
-  padding: 1rem;
+  margin: 1rem;
 }
 .homePageGames .game img {
   border-radius: 0.75rem;
@@ -403,15 +403,13 @@ footer p {
   nav .title {
     font-size: 1rem;
     min-width: 12rem;
-    margin-left: 5rem;
   }
-  .games {
+  .homePageGames {
     flex-direction: column;
   }
-  .games .game {
-    width: 80%;
+  .homePageGames .game {
     min-width: 200px;
-    max-width: 30rem;
+    max-width: 60%;
   }
   .topContainer {
     flex-direction: column;
@@ -446,6 +444,15 @@ footer p {
   }
   #bottomLinks {
     display: flex;
+  }
+}
+@media screen and (max-width: 500px) {
+  .homePageGames .game {
+    min-width: 200px;
+    max-width: inherit;
+  }
+  .topContainer .gameTitle {
+    font-size: 3rem;
   }
 }
 
