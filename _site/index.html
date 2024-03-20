@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="https://kit.fontawesome.com/d2216db615.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <link href="dist/hamburgers.css" rel="stylesheet">
   </head>
 
-  <body style="margin-top:77px;"> <!--I wonder if there's a better way to add the space on top-->
+  <body style="padding-top:78px;"> <!--I wonder if there's a better way to add the space on top-->
     <nav>
       <ul>
-        <li class="hamburger" style="margin-left: 10%;">
-          <i class="fa-solid fa-bars" onclick="toggleHamburgerMenu()"></i>
+        <li class="hamburger">
+          <i id="hamburgerIcon" class="fa-solid fa-bars" onclick="toggleHamburgerMenu()"></i>
         </li>
-        <li class="title"><a href="index.html">My Portfolio</a></li>
+        <li class="title"><a href="index.html">frutti.dev</a></li>
         <!--<li class="title" id="welcome">My Portfolio</li>-->
         <li><a href="index.html">Games</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -32,21 +31,19 @@
       <ul>
         <li id="welcome">welcome!</li>
       </ul>
-        <ul>
+      <ul>
         <li><a href="https://www.linkedin.com/in/francesca-mancillas/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
         <li><a href="https://francescafrog.itch.io/" class="icon"><i class="fa-brands fa-itch-io"></i></a></li>
-        <li><a href="https://github.com/fruttipie" class="icon"><i class="fa-brands fa-github"></i></i></a></li>
         <li><a href="https://twitter.com/frutti" class="icon"><i class="fa-brands fa-twitter"></i></i></a></li>
       </ul>
     </nav>
-    <div id="navLinkList">
-      <ul>
+    <div>
+      <ul id="navLinkList">
         <li class="hamburgerLink"><a href="index.html">Games</a></li>
         <li class="hamburgerLink"><a href="about.html">About Me</a></li>
         <!-- <li class="hamburgerLink"><a href="art.html">Art</a></li> -->
       </ul>
     </div>
-  </div>
 
     <ul class="games">
     <li class="game">
@@ -54,15 +51,15 @@
         <figcaption>OVERWATCH 2</figcaption>
     </li>
     <li class="game">
-        <img src="images/diablo4.jpg" alt="Diablo IV">
+        <a href="diablo.html"><img src="images/DiabloIV/diablo4.jpg" alt="Diablo IV"></a>
         <figcaption>DIABLO IV</figcaption>
     </li>
-    <li class="game">
+    <!-- <li class="game">
         <img src="images/astral_onslaught.png" alt="Adventure Assembly">
-        <figcaption>ADVENTURE ASSEMBLY</figcaption>
+        <figcaption>ADVENTURE ASSEMBLY</figcaption> -->
     </li>
     <li class="game">
-        <img src="images/astral_onslaught.png" alt="UCI-Ware">
+        <img src="images/UCIWareIcon.png" alt="UCI-Ware">
         <figcaption>UCI-WARE</figcaption>
     </li>
     <li class="game">
@@ -71,7 +68,7 @@
     </li>
     <li class="game">
         <img src="images/Wormchelor/Wormchelor.png" alt="The Wormchelor: The Card Game">
-        <figcaption class="longerTitle">THE WORMCHELOR: CARD GAME</figcaption>
+        <figcaption class="longerTitle" style="font-size: 1.5rem;">THE WORMCHELOR: CARD GAME</figcaption>
     </li>
     <li class="game">
         <img src="images/astral_onslaught.png" alt="Astral Onslaught">
@@ -82,6 +79,11 @@
 
   <footer>
     <div id="backToTop"><a href="#top">Back to Top</a></div>
+    <ul id="bottomLinks">
+      <li><a href="https://www.linkedin.com/in/francesca-mancillas/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <li><a href="https://francescafrog.itch.io/" class="icon"><i class="fa-brands fa-itch-io"></i></a></li>
+      <li><a href="https://twitter.com/frutti" class="icon"><i class="fa-brands fa-twitter"></i></i></a></li>
+    </ul>
     <p>copyright &copy; 2024 Francesca M.</p>
   </footer>
   <script src="script.js"></script> 

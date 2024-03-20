@@ -4,19 +4,31 @@ title: "About Me"
 ---
 
 <ul class="aboutMe">
-    <li style="margin-top: 10%; margin-left: 10%;">
-        <p style="display: inline">I am </p>
-        <p class="customizable" id="aboutMe1" style="display: inline;">a game designer</p>
-        <div style="margin: 2rem 0 0 7rem">
-            <p style="display: inline">who</p>
-            <p class="customizable" id="aboutMe2" style="display: inline">makes games</p>
-            <p style="display: inline">!</p>
+    <li style="max-width: 60%;">
+        <h1 style="margin-bottom: 2rem;">{{ page.title }}</h1>
+        <h2>I'm <strong>Francesca</strong>. <em style="font-size: 1.5rem;">(she/her)</em></h2>
+        <p>I'm a UC Irvine student majoring in Game Design & Interactive media!
+            I'm a big fan of roguelikes and I derive a lot of my inspiration from them.
+        </p>
+        <div class="customizaAboutMe">
+            <p>I am </p>
+            <p class="customizable" id="aboutMe1">a game designer</p>
+            <br>
+            <div class="aboutMe2Section">
+                <p>who</p>
+                <p class="customizable" id="aboutMe2">makes games</p>
+                <p>!</p>
+            </div>
         </div>
     </li>
     <li>
-        <img src="/images/Me.jpg" style="margin-right: 10%;" alt="Me!">
+        <img src="/images/Me.jpg" alt="Me!">
     </li>
-
-    <script src="aboutMeScript.js"></script> 
 </ul>
+<!--
+<p class="quote">"She has a large breadth of skills and show passion for her work and others’.
+    She's not afraid to ask for help, and she's very attentive and responsive while receiving it."</p>
+-->
+
+<script src="aboutMeScript.js"></script> 
 

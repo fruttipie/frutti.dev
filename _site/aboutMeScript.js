@@ -4,7 +4,7 @@ const aboutMeMessage1 = [
     "a game designer",
     "a digital artist",
     "a rogue-like fanatic",
-    //"a game design student with a cs minor",
+    "a game design student with a cs minor",
     "a cat lover",
     "a murloc enthusiast",
     "a full-time student",
@@ -15,19 +15,22 @@ const aboutMeMessage1 = [
     "a inagural SPARX intern",
     "a minecraft enjoyer",
     "an alien",
-    //"a tainted lost player",
+    "a tainted lost player",
     "a self-financed student",
-    "loves hearthstone battlegrounds",
-    //"an unstoppable force"
+    "a hearthstone battlegrounds fiend",
+    "a class designer",
+    "a hero designer",
+    "a core gameplay designer",
+    "probably a wizard"
 ];
 
 const aboutMeMessage2 = [
     "loves pad thai",
-    //"has 550+ hours in The Binding of Isaac",
-    "loves Peter the Ant Eater",
+    "loves The Binding of Isaac: Rebirth",
+    "loves Peter the Anteater",
     "really appreciates you for stopping by",
     "dyes her hair a ton of colors",
-    "currently has blue hair",
+    "currently has teal hair",
     "loves fun facts",
     "uses Twitter a lot",
     "has 4 cats",
@@ -39,10 +42,12 @@ const aboutMeMessage2 = [
     "loves honeydew melon candy",
     "is from outer space",
     "loves parmesan cheese",
-    "has had 10 jobs",
+    "has had 10 different jobs",
     "loves playing Captain Hoggar",
     "used to be a C++ tutor",
-    //"is against an unmovable object"
+    "recently played through Diablo 1",
+    "has been doing digital art for 12 years",
+    "loves in-n-out burger"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

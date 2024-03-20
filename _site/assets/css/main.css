@@ -14,6 +14,35 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+img, video {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;
+  max-height: 40rem;
+  object-fit: contain;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+hr {
+  margin: 2rem 10rem;
+  border: 0.15rem solid hsl(315, 5%, 83%);
+  border-radius: 1rem;
+}
+
+strong {
+  color: #ce2f4e;
+}
+
+.quote {
+  font-style: italic;
+  color: #ce2f4e;
+  font-size: larger;
+  font-weight: bolder;
+}
+
 /* Navigation Bar */
 nav {
   overflow: hidden;
@@ -27,7 +56,6 @@ nav {
   z-index: 2;
 }
 nav ul {
-  text-align: center;
   list-style-type: none;
   text-align: center;
   margin: 0 0.5rem;
@@ -36,7 +64,7 @@ nav ul {
   align-items: center;
 }
 nav ul li {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   margin: 0rem 0.15rem;
 }
 nav ul li a {
@@ -75,7 +103,7 @@ nav ul li .icon i {
   font-size: 1.5rem;
 }
 nav ul .title {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   border-radius: 0.5rem;
@@ -103,6 +131,7 @@ nav ul #welcome {
   transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
   color: #fafafa;
+  font-size: 1.25rem;
 }
 nav ul #welcome:hover {
   cursor: pointer;
@@ -114,23 +143,41 @@ nav .hamburger {
   font-size: 1.5rem;
   display: none;
 }
+nav .hamburger i {
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
+  color: #fafafa;
+  width: 24px;
+  height: 24px;
+  padding: 0.75rem;
+}
 nav .hamburger i:hover {
   cursor: pointer;
 }
+nav .hamburger i:hover {
+  background-color: #ce2f4e;
+}
 
 #navLinkList {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
   display: none;
+  position: fixed;
   flex-direction: column;
   background-color: hsl(270, 6%, 13%);
   z-index: 3;
-  list-style: none;
-  gap: 1rem;
-  padding: 1.5rem;
-  padding-top: 0;
-  max-width: 10rem;
+  width: 100%;
   justify-content: center;
-  position: fixed;
-  border-radius: 0 0 0.75rem 0;
+  align-items: center;
+  margin: 0;
+  margin-top: -0.75rem;
 }
 
 .flex {
@@ -161,39 +208,77 @@ nav .hamburger i:hover {
   list-style-type: none;
   align-items: center;
   flex-flow: row wrap;
+  gap: 0.75rem;
 }
 .games .game {
   width: 25%;
   min-width: 400px;
   height: 25%;
-  margin: 1rem;
   padding: 1rem;
 }
 .games .game img {
+  border-radius: 0.75rem;
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 0.75rem;
   transition: filter ease 0.1s;
 }
 .games .game img:hover {
   filter: opacity(85%);
   cursor: pointer;
 }
-.games .game figcaption {
-  font-size: 1.5rem;
+.games figcaption {
+  line-height: 1.75rem;
+  font-size: 1.75rem;
   font-weight: bold;
-  text-align: center;
-  margin-top: 0.5rem;
   white-space: nowrap;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.gameTitle {
+  font-size: 4rem;
+  margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gamesContainer {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.gamesContainer .item {
+  min-width: 300px;
+  max-width: 35%;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.gamesContainer .item li {
+  margin-left: 2rem;
+}
+.gamesContainer h2 {
+  margin-bottom: 0.5rem;
+}
+.gamesContainer figcaption {
+  font-size: 1.25rem;
+  text-align: center;
+  font-style: italic;
 }
 
 .aboutMe {
-  padding: 2rem;
   list-style-type: none;
   font-size: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  gap: 3rem;
 }
 .aboutMe .customizable {
   border-radius: 0.5rem;
@@ -210,16 +295,18 @@ nav .hamburger i:hover {
 .aboutMe .customizable:hover {
   cursor: pointer;
 }
-.aboutMe li {
-  margin: 2rem;
-}
 .aboutMe li img {
-  max-width: 45%;
-  width: 100%;
-  height: 100%;
   display: block;
-  border-radius: 0.75rem;
   max-width: 300px;
+}
+.aboutMe .customizaAboutMe {
+  margin: 2rem 0;
+}
+.aboutMe .customizaAboutMe p {
+  display: inline;
+}
+.aboutMe .aboutMe2Section {
+  margin: 0 0 0 10%;
 }
 
 footer {
@@ -228,6 +315,10 @@ footer {
   text-align: center;
   padding: 1.25rem;
   margin-top: 0.5rem 0;
+}
+footer ul {
+  display: flex;
+  list-style: none;
 }
 footer a {
   border-radius: 0.5rem;
@@ -244,12 +335,19 @@ footer a:hover {
   background-color: #ce2f4e;
 }
 footer p {
-  margin-top: 0.75rem;
   font-style: italic;
 }
 
 #backToTop {
   display: none;
+  margin-bottom: 1.5rem;
+}
+
+#bottomLinks {
+  display: none;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 0.25rem;
   margin-bottom: 1rem;
 }
 
@@ -264,7 +362,10 @@ footer p {
 }
 @media screen and (max-width: 1000px) {
   nav {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+  nav ul:not(:first-child) {
+    display: none;
   }
   nav li:not(.title, .hamburger, .hamburgerLink) {
     display: none;
@@ -275,7 +376,7 @@ footer p {
   nav .title {
     font-size: 1rem;
     min-width: 12rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
   }
   .games {
     flex-direction: column;
@@ -285,12 +386,29 @@ footer p {
     min-width: 200px;
     max-width: 30rem;
   }
+  .gamesContainer {
+    flex-direction: column;
+  }
+  .gamesContainer .item {
+    min-width: 85%;
+    margin: 1rem;
+  }
   .aboutMe {
     flex-direction: column;
     justify-content: center;
+    padding: 0;
+  }
+  .aboutMe .customizaAboutMe {
+    min-width: 500px;
+  }
+  footer p {
+    margin-top: 0.75rem;
   }
   #backToTop {
     display: block;
+  }
+  #bottomLinks {
+    display: flex;
   }
 }
 

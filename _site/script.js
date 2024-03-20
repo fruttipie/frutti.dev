@@ -48,7 +48,7 @@ const welcomeMessages = [
     "welcome!!",
     "*:･ﾟ✧*:･ﾟ✧",
     "yaaaaay!",
-    "stay a while and listen!",
+    "stay awhile and listen!",
     "how's it hanging?",
     "Isaac, we love you",
     "land lubber ♡",
@@ -125,12 +125,13 @@ customGreetingEl.addEventListener("click", (e) => {
 // Toggle between showing and hiding the navigation menu links
 // when the user clicks on the hamburger menu / bar icon
 function toggleHamburgerMenu() {
-    console.info("Flex")
     document.getElementById("navLinkList").classList.toggle("flex");
+    document.getElementById("hamburgerIcon").classList.toggle("fa-bars");
+    document.getElementById("hamburgerIcon").classList.toggle("fa-xmark");
 }
 
 addEventListener("resize", (e) => {
-    if (window.innerWidth > 1000) {
-        document.getElementById("navLinkList").classList.remove("flex");
+    if (document.getElementById("hamburgerIcon").classList.contains("fa-xmark")) {
+        toggleHamburgerMenu();
     }
 });

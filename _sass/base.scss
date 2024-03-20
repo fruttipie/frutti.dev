@@ -4,6 +4,38 @@ $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-seri
 
 /* This SCSS file covers everything in the default layout */
 
+@mixin clickable {
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
+  color: $backgroundColor;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin borderRadius {
+  border-radius: 0.75rem;
+}
+
+@mixin icon {
+  font-size: 1.5rem;
+}
+
+@mixin mainPageDisplay {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+// General formatting stuff
+
 * {
   margin: 0;
   padding: 0;
@@ -19,32 +51,33 @@ body {
   font-family: $bodyFont;
 }
 
-
-@mixin clickable {
-  border-radius: 0.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color ease 0.2s;
-  padding: 0.75rem 1rem;
-  color: $backgroundColor;
-
-  &:hover {
-    cursor: pointer;
-  }
+img, video {
+  @include borderRadius;
+  width: 100%;
+  height: auto;
+  max-height: 40rem;
+  object-fit: contain;
 }
 
-@mixin icon {
-  font-size: 1.5rem;
+h3 {
+  font-weight: normal;
 }
 
-@mixin mainPageDisplay {
-  text-align: center;
-  list-style-type: none;
-  text-align: center;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
+hr {
+  margin: 2rem 10rem;
+  border: 0.15rem solid $mediumColor;
+  border-radius: 1rem;
+}
+
+strong {
+  color: $accentColor;
+}
+
+.quote {
+  font-style: italic;
+  color: $accentColor;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 /* Navigation Bar */
@@ -64,7 +97,7 @@ nav {
     @include mainPageDisplay;
 
     li {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       margin: 0rem 0.15rem;
       
       a {
@@ -101,7 +134,7 @@ nav {
     }
 
     .title { // commented out stuff is from old title that would change if you clicked it
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: bold;
       // width: 20rem;
       text-align: center;
@@ -120,6 +153,7 @@ nav {
       font-weight: bold;
       text-align: center;
       @include clickable;
+      font-size: 1.25rem;
 
       &:hover {
         background-color: $accentColor2;
@@ -130,25 +164,32 @@ nav {
   .hamburger {
     @include icon;
     display: none;
-    i:hover {
-      cursor: pointer;
+
+    i {
+      @include clickable;
+      width: 24px;
+      height: 24px;
+      padding: 0.75rem;
+
+      &:hover {
+        background-color: $accentColor;
+      }
     }
   }
 }
 
 #navLinkList {
+  @include mainPageDisplay;
   display: none;
+  position: fixed;
   flex-direction: column;
   background-color: $bodyColor;
   z-index: 3; // to make it be above the nav bar
-  list-style: none;
-  gap: 1rem;
-  padding: 1.5rem;
-  padding-top: 0;
-  max-width: 10rem;
+  width: 100%;
   justify-content: center; // this is doing nothing???
-  position: fixed;
-  border-radius: 0 0 0.75rem 0;
+  align-items: center;
+  margin: 0;
+  margin-top: -0.75rem;
 }
 
 .flex {
@@ -173,19 +214,21 @@ nav {
   list-style-type: none;
   align-items: center;
   flex-flow: row wrap;  
+  gap: 0.75rem;
+
 
   .game {
     width: 25%;
     min-width: 400px;
     height: 25%;
-    margin: 1rem;
+    // margin: 1rem;
     padding: 1rem;
   
     img {
+      @include borderRadius();
       width: 100%;
       height: 100%;
       display: block;
-      border-radius: 0.75rem;
       // filter:brightness(0.9) grayscale(.25);
       transition: filter ease 0.1s;
 
@@ -194,27 +237,68 @@ nav {
         cursor: pointer;
       }
     }
+  }
 
-    figcaption {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 0.5rem;
-      white-space: nowrap;
+  figcaption {
+    line-height: 1.75rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+// individual game pages
+
+.gameTitle {
+  font-size: 4rem;
+  margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gamesContainer { // this is a ul
+  display: flex;
+  flex-flow: row wrap;  
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  .item {
+    min-width: 300px;
+    max-width: 35%;
+    margin: 0 1rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+
+    li {
+      margin-left: 2rem;
+      
     }
+  }
+  
+  h2 {
+    margin-bottom: 0.5rem;
+  }
 
-    // .longerTitle { // still  having issues where the title is too big when the window is resized :/
-    //   font-size: 1.25rem;
-    // }
+  figcaption {
+    font-size: 1.25rem;
+    text-align: center;
+    font-style: italic;
   }
 }
 
 .aboutMe {
-  padding: 2rem;
   list-style-type: none;
   font-size: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  gap: 3rem;
 
   .customizable {
     @include clickable;
@@ -225,16 +309,22 @@ nav {
   }
 
   li {
-    margin: 2rem;
-
     img {
-      max-width: 45%;
-      width: 100%;
-      height: 100%;
       display: block;
-      border-radius: 0.75rem;
       max-width: 300px;
     }
+  }
+
+  .customizaAboutMe {
+    margin: 2rem 0;
+
+    p {
+      display: inline;
+    }
+  }
+
+  .aboutMe2Section {
+    margin: 0 0 0 10%; 
   }
 }
 
@@ -245,6 +335,11 @@ footer {
   padding: 1.25rem;
   margin-top: 0.5rem 0;
 
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
   a {
     @include clickable;      
     &:hover {
@@ -253,13 +348,20 @@ footer {
   }
 
   p {
-    margin-top: 0.75rem;
     font-style: italic;
   }
 }
 
 #backToTop {
   display: none;
+  margin-bottom: 1.5rem;
+}
+
+#bottomLinks {
+  display: none;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 0.25rem;
   margin-bottom: 1rem;
 }
 
@@ -278,9 +380,12 @@ footer {
 
 @media screen and (max-width: 1000px) {
   nav {
-    justify-content: flex-start;
-    
-    
+    justify-content: center;
+
+    ul:not(:first-child) {
+      display: none;
+    }
+
     li:not(.title, .hamburger, .hamburgerLink) {
       display: none;
     }
@@ -292,7 +397,7 @@ footer {
     .title {
       font-size: 1rem;
       min-width: 12rem;
-      margin-left: 2rem;
+      margin-left: 5rem;
     }
   }
 
@@ -306,12 +411,34 @@ footer {
     }
   }
 
+  .gamesContainer {
+    flex-direction: column;
+
+    .item {
+      min-width: 85%;
+      margin: 1rem;
+    }
+  }
+
   .aboutMe {
     flex-direction: column;
     justify-content: center;
+    padding: 0;
+
+    .customizaAboutMe {
+      min-width: 500px;
+    }
+  }
+
+  footer p {
+    margin-top: 0.75rem;
   }
 
   #backToTop {
     display: block;
+  }
+
+  #bottomLinks {
+    display: flex;
   }
 }
