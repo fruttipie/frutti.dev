@@ -322,14 +322,21 @@ nav .hamburger i:hover {
 .aboutMe .customizable:hover {
   cursor: pointer;
 }
-.aboutMe li img {
+.aboutMe .aboutMeItem {
+  max-width: 60%;
+  margin-bottom: 2rem;
+}
+.aboutMe .aboutMeItem h1 {
+  margin-bottom: 2rem;
+}
+.aboutMe .aboutMeItem img {
   display: block;
   max-width: 300px;
 }
-.aboutMe .customizaAboutMe {
+.aboutMe .aboutMeItem .customizaAboutMe {
   margin: 2rem 0;
 }
-.aboutMe .customizaAboutMe p {
+.aboutMe .aboutMeItem .customizaAboutMe p {
   display: inline;
 }
 .aboutMe .aboutMe2Section {
@@ -453,6 +460,15 @@ footer p {
   }
   .topContainer .gameTitle {
     font-size: 3rem;
+  }
+  .aboutMe .aboutMeItem {
+    max-width: 80%;
+  }
+  .aboutMe .aboutMeItem h1 {
+    font-size: 3rem;
+  }
+  .aboutMe .aboutMeItem .customizaAboutMe {
+    display: none;
   }
 }
 

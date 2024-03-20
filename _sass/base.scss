@@ -331,18 +331,25 @@ nav {
     line-height: 2em;
   }
 
-  li {
+  .aboutMeItem {
+    max-width: 60%;
+    margin-bottom: 2rem;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
     img {
       display: block;
       max-width: 300px;
     }
-  }
 
-  .customizaAboutMe {
-    margin: 2rem 0;
-
-    p {
-      display: inline;
+    .customizaAboutMe {
+      margin: 2rem 0;
+  
+      p {
+        display: inline;
+      }
     }
   }
 
@@ -489,6 +496,20 @@ footer {
   .topContainer {
     .gameTitle {
       font-size: 3rem;
+    }
+  }
+
+  .aboutMe {
+    .aboutMeItem {
+      max-width: 80%;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .customizaAboutMe {
+        display: none;
+      }
     }
   }
 }
