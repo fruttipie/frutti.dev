@@ -103,7 +103,8 @@ const welcomeMessages = [
     "YEAHHHH!!!!",
     "AAAAAAHHHH!!!",
     "wizard frog",
-    "$accentColor2"
+    "$accentColor2",
+    "my hubris scares me"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
