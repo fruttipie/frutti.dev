@@ -27,14 +27,15 @@ const aboutMeMessage1 = [
     "a mediocre Poker player",
     "a Fixer",
     "an older sister",
-    "a vinyl collector"
+    "a vinyl collector",
+    "フランチェスカ"
 ];
 
 const aboutMeMessage2 = [
     "loves pad thai",
-    "loves The Binding of Isaac: Rebirth",
+    "loves The Binding of Isaac",
     "loves Peter the Anteater",
-    "really appreciates you for stopping by",
+    "really appreciates you stopping by",
     "dyes her hair a ton of colors",
     "currently has pink hair",
     "loves fun facts",
@@ -52,13 +53,13 @@ const aboutMeMessage2 = [
     "loves playing Captain Hoggar",
     "used to be a C++ tutor",
     "has beaten Diablo 1",
-    "has been doing digital art for 12 years",
+    "ha digital artist of 13+ years",
     "loves in-n-out burger",
-    "recommends play 1000xResist",
+    "recommends 1000xResist",
     "snaps turn 1 in Marvel Snap",
     "is in Diablo IV's credits",
-    "will be studying abroad in Japan soon",
-    "is extremely smart, talented, and humble",
+    "will be studying abroad in Japan",
+    "is smart, talented, and humble",
     "is studying Japanese"
 ];
 

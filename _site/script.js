@@ -104,7 +104,15 @@ const welcomeMessages = [
     "AAAAAAHHHH!!!",
     "wizard frog",
     "$accentColor2",
-    "my hubris scares me"
+    "my hubris scares me",
+    "MIKU MIKU BEAM!",
+    "おはよう!",
+    "フランチェスカです。",
+    "いらっしゃい！",
+    "おかえり！",
+    "I've got poket Aces",
+    "I'm going all in",
+    "I have $3 to my name"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);

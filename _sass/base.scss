@@ -63,7 +63,7 @@ h3 {
 }
 
 hr {
-  margin: 2rem 10rem;
+  margin: 2rem 20%;
   border: 0.15rem solid $mediumColor;
   border-radius: 1rem;
 }
@@ -261,7 +261,7 @@ nav {
     font-size: 4rem;
     margin: 2rem;
     text-align: center;
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   .playButton {
@@ -314,13 +314,15 @@ nav {
   }
 }
 
+// About me
+
 .aboutMe {
   list-style-type: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  margin-top: 5rem;
   gap: 5%;
 
   .customizable {
@@ -332,8 +334,8 @@ nav {
   }
 
   .aboutMeItem {
-    max-width: 60%;
-    margin-bottom: 2rem;
+    max-width: 55%;
+    //margin-bottom: 2rem;
 
     h1 {
       margin-bottom: 2rem;
@@ -341,7 +343,22 @@ nav {
 
     img {
       display: block;
-      max-width: 300px;
+    }
+
+    figcaption {
+      line-height: 1.75rem;
+      font-size: 1.75rem;
+      font-weight: bold;
+      white-space: nowrap;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    a {
+      &:hover {
+        filter: opacity(85%);
+        cursor: pointer;
+      }
     }
 
     .customizaAboutMe {
@@ -354,7 +371,7 @@ nav {
   }
 
   .aboutMe2Section {
-    margin: 0 0 0 10%; 
+    margin: 0.75rem 0 0 10%; 
   }
 }
 
@@ -432,7 +449,7 @@ footer {
   }
 
   .homePageGames {
-    flex-direction: column;
+    //flex-direction: column;
 
     .game {
       min-width: 200px;
@@ -468,7 +485,7 @@ footer {
     padding: 0;
 
     .customizaAboutMe {
-      min-width: 500px;
+      display: none;
     }
   }
 
@@ -491,6 +508,11 @@ footer {
       min-width: 100px;
       max-width: inherit;
     }
+
+    figcaption {
+      //font-size: 1.25rem;
+      white-space: normal;
+    }
   }
 
   .topContainer {
@@ -506,18 +528,6 @@ footer {
       h1 {
         font-size: 3rem;
       }
-
-      .customizaAboutMe {
-        display: none;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .homePageGames {
-    figcaption {
-      font-size: 1.25rem;
     }
   }
 }

@@ -26,7 +26,7 @@ h3 {
 }
 
 hr {
-  margin: 2rem 10rem;
+  margin: 2rem 20%;
   border: 0.15rem solid hsl(315, 5%, 83%);
   border-radius: 1rem;
 }
@@ -246,7 +246,6 @@ nav .hamburger i:hover {
   font-size: 4rem;
   margin: 2rem;
   text-align: center;
-  text-transform: uppercase;
 }
 .topContainer .playButton {
   border-radius: 0.5rem;
@@ -304,7 +303,7 @@ nav .hamburger i:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  margin-top: 5rem;
   gap: 5%;
 }
 .aboutMe .customizable {
@@ -323,15 +322,25 @@ nav .hamburger i:hover {
   cursor: pointer;
 }
 .aboutMe .aboutMeItem {
-  max-width: 60%;
-  margin-bottom: 2rem;
+  max-width: 55%;
 }
 .aboutMe .aboutMeItem h1 {
   margin-bottom: 2rem;
 }
 .aboutMe .aboutMeItem img {
   display: block;
-  max-width: 300px;
+}
+.aboutMe .aboutMeItem figcaption {
+  line-height: 1.75rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.aboutMe .aboutMeItem a:hover {
+  filter: opacity(85%);
+  cursor: pointer;
 }
 .aboutMe .aboutMeItem .customizaAboutMe {
   margin: 2rem 0;
@@ -340,7 +349,7 @@ nav .hamburger i:hover {
   display: inline;
 }
 .aboutMe .aboutMe2Section {
-  margin: 0 0 0 10%;
+  margin: 0.75rem 0 0 10%;
 }
 
 footer {
@@ -411,9 +420,6 @@ footer p {
     font-size: 1rem;
     min-width: 12rem;
   }
-  .homePageGames {
-    flex-direction: column;
-  }
   .homePageGames .game {
     min-width: 200px;
     max-width: 60%;
@@ -441,7 +447,7 @@ footer p {
     padding: 0;
   }
   .aboutMe .customizaAboutMe {
-    min-width: 500px;
+    display: none;
   }
   footer p {
     margin-top: 0.75rem;
@@ -458,6 +464,9 @@ footer p {
     min-width: 100px;
     max-width: inherit;
   }
+  .homePageGames figcaption {
+    white-space: normal;
+  }
   .topContainer .gameTitle {
     font-size: 3rem;
   }
@@ -466,14 +475,6 @@ footer p {
   }
   .aboutMe .aboutMeItem h1 {
     font-size: 3rem;
-  }
-  .aboutMe .aboutMeItem .customizaAboutMe {
-    display: none;
-  }
-}
-@media screen and (max-width: 400px) {
-  .homePageGames figcaption {
-    font-size: 1.25rem;
   }
 }
 
