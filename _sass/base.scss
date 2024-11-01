@@ -488,7 +488,7 @@ footer {
 @media screen and (max-width: 500px) {
   .homePageGames {
     .game {
-      min-width: 200px;
+      min-width: 100px;
       max-width: inherit;
     }
   }
@@ -510,6 +510,14 @@ footer {
       .customizaAboutMe {
         display: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homePageGames {
+    figcaption {
+      font-size: 1.25rem;
     }
   }
 }

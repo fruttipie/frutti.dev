@@ -455,7 +455,7 @@ footer p {
 }
 @media screen and (max-width: 500px) {
   .homePageGames .game {
-    min-width: 200px;
+    min-width: 100px;
     max-width: inherit;
   }
   .topContainer .gameTitle {
@@ -469,6 +469,11 @@ footer p {
   }
   .aboutMe .aboutMeItem .customizaAboutMe {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .homePageGames figcaption {
+    font-size: 1.25rem;
   }
 }
 

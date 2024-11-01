@@ -4,7 +4,6 @@ const aboutMeMessage1 = [
     "a game designer",
     "a digital artist",
     "a rogue-like fanatic",
-    "a game design student with a cs minor",
     "a cat lover",
     "a murloc enthusiast",
     "a full-time student",
@@ -21,7 +20,14 @@ const aboutMeMessage1 = [
     "a class designer",
     "a hero designer",
     "a core gameplay designer",
-    "probably a wizard"
+    "probably a wizard",
+    "a content designer",
+    "a systems designer",
+    "a combat designer",
+    "a mediocre Poker player",
+    "a Fixer",
+    "an older sister",
+    "a vinyl collector"
 ];
 
 const aboutMeMessage2 = [
@@ -30,7 +36,7 @@ const aboutMeMessage2 = [
     "loves Peter the Anteater",
     "really appreciates you for stopping by",
     "dyes her hair a ton of colors",
-    "currently has teal hair",
+    "currently has pink hair",
     "loves fun facts",
     "uses Twitter a lot",
     "has 4 cats",
@@ -45,9 +51,15 @@ const aboutMeMessage2 = [
     "has had 10 different jobs",
     "loves playing Captain Hoggar",
     "used to be a C++ tutor",
-    "recently played through Diablo 1",
+    "has beaten Diablo 1",
     "has been doing digital art for 12 years",
-    "loves in-n-out burger"
+    "loves in-n-out burger",
+    "recommends play 1000xResist",
+    "snaps turn 1 in Marvel Snap",
+    "is in Diablo IV's credits",
+    "will be studying abroad in Japan soon",
+    "is extremely smart, talented, and humble",
+    "is studying Japanese"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";
