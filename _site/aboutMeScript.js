@@ -20,7 +20,6 @@ const aboutMeMessage1 = [
     "a class designer",
     "a hero designer",
     "a core gameplay designer",
-    "probably a wizard",
     "a content designer",
     "a systems designer",
     "a combat designer",
@@ -60,7 +59,8 @@ const aboutMeMessage2 = [
     "is in Diablo IV's credits",
     "will be studying abroad in Japan",
     "is smart, talented, and humble",
-    "is studying Japanese"
+    "is studying Japanese",
+    "has attended 4 different colleges"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

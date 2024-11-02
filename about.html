@@ -2,9 +2,16 @@
 layout: default
 title: "About Me"
 ---
+<div class="topContainer">
+    <h1 class="gameTitle">{{ page.title }}</h1>
+</div>
 <ul class="aboutMe">
-    <div class="aboutMeItem" style="margin-bottom: 2rem;">
-        <h1>{{ page.title }}</h1>
+    <div class="aboutMeItem">
+        <img style="max-width: 350px" src="/images/Me3.jpg" alt="Me!">
+        <p id="onlyOnMobile"><br></p>
+    </div>
+
+    <div class="aboutMeItem">
         <h2 style="font-size: 2.25rem;">I'm <strong>Francesca</strong>. <em style="font-size: 1.5rem;">(she/her)</em></h2>
         <p>I'm a UC Irvine student majoring in Game Design & Interactive media!
             I'm a big fan of roguelikes and I derive a lot of my inspiration from them.
@@ -20,15 +27,12 @@ title: "About Me"
             </div>
         </div>
     </div>
-    <div class="aboutMeItem">
-        <img style="max-width: 350px" src="/images/Me2.jpg" alt="Me!">
-    </div>
 </ul>
 
 <hr>
 
 <div class="topContainer">
-    <h1 style="margin-top:1rem;">Currently Playing</h1>
+    <h1>Currently Playing</h1>
 </div>
 
 <div class="homePageGames">    

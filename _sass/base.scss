@@ -63,7 +63,7 @@ h3 {
 }
 
 hr {
-  margin: 2rem 20%;
+  margin: 4rem 20%;
   border: 0.15rem solid $mediumColor;
   border-radius: 1rem;
 }
@@ -282,7 +282,7 @@ nav {
   list-style: none;
   justify-content: center;
   align-items: center;
-  gap: 1%;
+  //gap: 1%;
   margin-bottom: 2rem;
 
   .item {
@@ -322,7 +322,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
   gap: 5%;
 
   .customizable {
@@ -419,6 +418,19 @@ footer {
 
 // Mobile Responsiveness
 
+#onlyOnMobile{
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .aboutMe {
+    .customizaAboutMe {
+      display: none;
+    }
+  }
+}
+
+
 @media screen and (max-width: 1100px) {
   #welcome {
     display: none;
@@ -427,6 +439,11 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+  #onlyOnMobile{
+    display: block;
+  }
+  
+  
   nav {
     justify-content: center;
 
@@ -483,10 +500,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 0;
-
-    .customizaAboutMe {
-      display: none;
-    }
   }
 
   footer p {

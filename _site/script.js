@@ -112,7 +112,15 @@ const welcomeMessages = [
     "おかえり！",
     "I've got poket Aces",
     "I'm going all in",
-    "I have $3 to my name"
+    "I have $3 to my name",
+    "Six to One",
+    "Hekki Allmo",
+    "Hekki Grace",
+    "Hair to Hair",
+    "Red to Blue",
+    "Knock knock",
+    "Sphere to Square",
+    "Why did you say that?"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
