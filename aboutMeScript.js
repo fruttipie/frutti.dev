@@ -60,7 +60,9 @@ const aboutMeMessage2 = [
     "will be studying abroad in Japan",
     "is smart, talented, and humble",
     "is studying Japanese",
-    "has attended 4 different colleges"
+    "has attended 4 different colleges",
+    "loves autobattlers",
+    "少し日本語が出来ます"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

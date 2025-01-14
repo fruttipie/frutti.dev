@@ -283,6 +283,10 @@ nav .hamburger i:hover {
 .gamesContainer .item li {
   margin-left: 2rem;
 }
+.gamesContainer .break {
+  flex-basis: 100%;
+  height: 0;
+}
 .gamesContainer h2 {
   margin-bottom: 0.5rem;
 }
