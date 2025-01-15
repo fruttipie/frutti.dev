@@ -52,7 +52,7 @@ const aboutMeMessage2 = [
     "loves playing Captain Hoggar",
     "used to be a C++ tutor",
     "has beaten Diablo 1",
-    "ha digital artist of 13+ years",
+    "is a digital artist of 13+ years",
     "loves in-n-out burger",
     "recommends 1000xResist",
     "snaps turn 1 in Marvel Snap",
