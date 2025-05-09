@@ -28,7 +28,8 @@ const aboutMeMessage1 = [
     "an older sister",
     "a vinyl collector",
     "フランチェスカ",
-    "留学生"
+    "留学生",
+    "the VGDC mascot creator"
 ];
 
 const aboutMeMessage2 = [
@@ -64,7 +65,8 @@ const aboutMeMessage2 = [
     "has attended 6 different colleges",
     "loves autobattlers",
     "少し日本語が出来ます",
-    "love to drive and talk"
+    "loves to drive and talk",
+    "created the VGDC mascots"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";
