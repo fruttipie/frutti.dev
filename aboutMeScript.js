@@ -27,7 +27,8 @@ const aboutMeMessage1 = [
     "a Fixer",
     "an older sister",
     "a vinyl collector",
-    "フランチェスカ"
+    "フランチェスカ",
+    "留学生"
 ];
 
 const aboutMeMessage2 = [
@@ -60,9 +61,10 @@ const aboutMeMessage2 = [
     "will be studying abroad in Japan",
     "is smart, talented, and humble",
     "is studying Japanese",
-    "has attended 4 different colleges",
+    "has attended 6 different colleges",
     "loves autobattlers",
-    "少し日本語が出来ます"
+    "少し日本語が出来ます",
+    "love to drive and talk"
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

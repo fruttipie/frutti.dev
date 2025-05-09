@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Slugs and Scorpions"
+---
+<div class="topContainer">
+    <h1 class="gameTitle">{{ page.title }}</h1>
+    <!--<a href="" class="playButton">Play Now!</a>-->
+</div>
+<div class="gamesContainer">
+    <div class="gameAsset">
+        <img src="images/Wormchelor/wormchelorCardExamples.png" alt="An image showcasing some of the game's cards!">
+        <figcaption>Some of the cards for our game!</figcaption>
+    </div>
+
+    <div class="item">
+        <em>My role:</em>
+        <h2><strong>Team Lead, Gameplay Designer, Artist</strong></h2>
+        <h3>September 2024 - December 2024 (4 Months)</h3>
+        <ul>
+            <li>Created a party game themed around <strong>worms</strong> where players use word combinations to try to impress the judge!</li>
+            <li>Led meetings to hone our game's <strong>vision</strong> given a limited timeframe.</li>
+            <li>Hosted many <strong>playtests</strong> focused on creating a versatile game given a restriction on the number of cards our game could utilize.</li>
+            <li>Drew the cute <strong>worms</strong> on each of the cards!</li>
+        </ul>
+    </div>
+</div>
