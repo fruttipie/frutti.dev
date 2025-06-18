@@ -52,7 +52,7 @@
 <ul class="aboutMe">
     <div class="aboutMeItem">
         <img style="max-width: 350px" src="/images/Me3.jpg" alt="Me!">
-        <p id="onlyOnMobile"><br></p>
+        <p class="onlyOnMobile"><br></p>
     </div>
 
     <div class="aboutMeItem">
@@ -66,10 +66,12 @@
         </p>
         <div class="customizaAboutMe">
             <p>I am </p>
+            <br class="onlyOnMobile">
             <p class="customizable" id="aboutMe1">a game designer</p>
             <br>
             <div class="aboutMe2Section">
-                <p>who</p>
+                <p>who </p>
+                <br class="onlyOnMobile">
                 <p class="customizable" id="aboutMe2">makes games</p>
                 <p>!</p>
             </div>
@@ -150,7 +152,9 @@ Quotes that make me sound like a lab-grown virus:
     <hr>
 
     <div class="secret">
-        Try clicking the <span id="exampleCustomizable">blue</span> buttons on this website for a surprise!
+        Try clicking the 
+        <span id="exampleCustomizable" style="line-height: 2.4em;">blue</span>
+        <br class="onlyOnMobile"> buttons on this website for a surprise!
     </div>
 
 <script src="aboutMeScript.js"></script> 

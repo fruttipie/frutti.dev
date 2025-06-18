@@ -191,15 +191,13 @@ nav .hamburger i:hover {
   transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
   color: #fafafa;
-  font-size: 1.15rem;
+  font-size: 1.3em;
   line-height: 3em;
   margin: 1rem;
+  background-color: #ce2f4e;
 }
 .hamburgerLink a:hover {
   cursor: pointer;
-}
-.hamburgerLink a:hover {
-  background-color: #ce2f4e;
 }
 
 .homePageGames {
@@ -346,10 +344,11 @@ nav .hamburger i:hover {
   cursor: pointer;
 }
 .aboutMe .aboutMeItem .customizaAboutMe {
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .aboutMe .aboutMeItem .customizaAboutMe p {
   display: inline;
+  line-height: 2.2em;
 }
 .aboutMe .aboutMe2Section {
   margin: 0.75rem 0 0 10%;
@@ -358,7 +357,7 @@ nav .hamburger i:hover {
 .secret {
   font-style: italic;
   text-align: center;
-  margin-bottom: 3em;
+  margin: 0 5% 3em;
   font-size: 1.5em;
 }
 .secret #exampleCustomizable {
@@ -372,6 +371,7 @@ nav .hamburger i:hover {
   font-style: normal;
   font-weight: bold;
   color: #fafafa;
+  box-decoration-break: clone;
 }
 .secret #exampleCustomizable:hover {
   cursor: pointer;
@@ -423,25 +423,32 @@ footer p {
   display: none !important;
 }
 
-#onlyOnMobile {
+.onlyOnMobile {
   display: none;
 }
 
+/*
 @media screen and (max-width: 1300px) {
-  .aboutMe .customizaAboutMe {
-    display: none;
+  .aboutMe {
+    .customizaAboutMe {
+      display: none;
+    }
   }
 }
+
+
 @media screen and (max-width: 1100px) {
   #welcome {
     display: none;
   }
+
   .secret {
     display: none;
   }
-}
+
+}*/
 @media screen and (max-width: 1000px) {
-  #onlyOnMobile {
+  .onlyOnMobile {
     display: block;
   }
   nav {
