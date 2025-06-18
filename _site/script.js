@@ -60,12 +60,12 @@ const welcomeMessages = [
     "AA EE OO",
     "Jerma985 here",
     "hmmmmmm",
-    "...",
+    ". . .",
     "hi!!!!",
     "hey there!!",
     "new wave of the future",
-    "!!!",
-    "!?",
+    "! ! !",
+    "! ?",
     "gamer moment",
     "Play Insaniquarium!!",
     "space cadet pinball",
@@ -77,7 +77,7 @@ const welcomeMessages = [
     "WARNING!!!",
     "zot zot!!",
     "hire me please!",
-    //"ooh you wanna hire me so bad",
+    "you wanna hire me so bad...",
     "game designer",
     "rogue-like fanatic",
     "#b5ffcb",
@@ -94,7 +94,7 @@ const welcomeMessages = [
     "fish can roll",
     "Isaac and his Mother",
     "+4 Mult",
-    "+2",
+    //"+2",
     "im a creep, im a weirdo",
     "quilboars!!!",
     "so cool!!!!",
@@ -111,7 +111,7 @@ const welcomeMessages = [
     "いらっしゃい！",
     "おかえり！",
     "I've got poket Aces",
-    "I'm going all in",
+    //"I'm going all in",
     "I have $3 to my name",
     "Six to One",
     "Hekki Allmo",
@@ -120,14 +120,37 @@ const welcomeMessages = [
     "Red to Blue",
     "Knock knock",
     "Sphere to Square",
-    "Why did you say that?"
+    "Why did you say that?",
+    "can I get it Mike's way?",
+    "いつも私は「大丈夫」と言う！",
+    "最高だね！！",
+    "まだ日本語を勉強中だよ！",
+    "最近どう？",
+    "みんくるはめっちゃかわいい！",
+    "イエイ！",
+    "大！丈！夫！",
+    "サイトに来てありがとう！",
+    "いらっしゃい！",
+    "いらっしゃいませ。",
+    "ようこそ！"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
 
 
 const updateInnerText = () => {
-    const randomGreetingIndex = Math.floor(Math.random() * welcomeMessages.length);
+    let randomGreetingIndex = Math.floor(Math.random() * welcomeMessages.length);
+    let currentInnerText = customGreetingEl.innerText;
+    let newInnerText = welcomeMessages[randomGreetingIndex];
+    console.info("current = " + currentInnerText + " new = " + newInnerText);
+
+     while (currentInnerText == newInnerText) {
+        // reroll!
+        console.info("Rerolling!");
+        randomGreetingIndex = Math.floor(Math.random() * welcomeMessages.length);
+        newInnerText = welcomeMessages[randomGreetingIndex];
+        console.info("current = " + currentInnerText + " new = " + newInnerText);
+    }
     customGreetingEl.innerText = welcomeMessages[randomGreetingIndex];
 };
 

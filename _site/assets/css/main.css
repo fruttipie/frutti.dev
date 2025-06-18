@@ -5,12 +5,12 @@
 }
 
 html {
-  background: hsl(270, 6%, 13%);
+  background: #211f23;
 }
 
 body {
   background: #fafafa;
-  color: hsl(270, 6%, 13%);
+  color: #211f23;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -45,7 +45,7 @@ strong {
 /* Navigation Bar */
 nav {
   overflow: hidden;
-  background-color: hsl(270, 6%, 13%);
+  background-color: #211f23;
   position: fixed;
   top: 0;
   width: 100%;
@@ -86,7 +86,7 @@ nav ul li button {
   color: #fafafa;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: hsl(270, 6%, 13%);
+  background-color: #211f23;
   height: 49px;
   width: 49px;
   transition: background-color ease 0.2s;
@@ -119,7 +119,7 @@ nav ul .title a {
   transition: color ease 0.2s;
 }
 nav ul .title a:hover {
-  background-color: hsl(270, 6%, 13%);
+  background-color: #211f23;
 }
 nav ul #welcome {
   font-weight: bold;
@@ -171,7 +171,7 @@ nav .hamburger i:hover {
   display: none;
   position: fixed;
   flex-direction: column;
-  background-color: hsl(270, 6%, 13%);
+  background-color: #211f23;
   z-index: 3;
   width: 100%;
   justify-content: center;
@@ -359,22 +359,26 @@ nav .hamburger i:hover {
   font-style: italic;
   text-align: center;
   margin-bottom: 3em;
-  font-size: 1.3em;
-  color: hsl(270, 3%, 35%);
+  font-size: 1.5em;
 }
-.secret .exampleCustomizable {
-  background-color: #3dbceb;
-  font-style: normal;
-  border-radius: 0.4rem;
+.secret #exampleCustomizable {
+  border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
-  padding: 0.45rem 0.6rem;
+  transition: background-color ease 0.2s;
+  padding: 0.75rem 1rem;
   color: #fafafa;
-  filter: opacity(70%);
+  background-color: #3dbceb;
+  font-style: normal;
+  font-weight: bold;
+  color: #fafafa;
+}
+.secret #exampleCustomizable:hover {
+  cursor: pointer;
 }
 
 footer {
-  background-color: hsl(270, 6%, 13%);
+  background-color: #211f23;
   color: #fafafa;
   text-align: center;
   padding: 1.25rem;
