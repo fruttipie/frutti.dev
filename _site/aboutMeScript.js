@@ -112,7 +112,18 @@ const exampleButtonColor = [
     ["sand colored", "rgb(203, 189, 147)", DARK_TEXT_COLOR],
     ["pistachio colored", "rgb(132, 176, 103)", LIGHT_TEXT_COLOR],
     ["wisteria purple", "rgb(201, 160, 220)", DARK_TEXT_COLOR],
-    ["mahogany", "rgb(189, 73, 15)", LIGHT_TEXT_COLOR]
+    ["mahogany", "rgb(189, 73, 15)", LIGHT_TEXT_COLOR],
+    ["egirl pink", "rgb(255, 141, 162)", DARK_TEXT_COLOR],
+    ["anton pink", "rgb(237, 139, 247)", DARK_TEXT_COLOR],
+    ["mauve", "rgb(224, 176, 255)", DARK_TEXT_COLOR],
+    ["violet", "rgb(138, 44, 232)", LIGHT_TEXT_COLOR],
+    ["emerald green", "rgb(80, 200, 120)", LIGHT_TEXT_COLOR],
+    ["pewter", "rgb(96, 98, 99)", LIGHT_TEXT_COLOR],
+    ["salmon", "rgb(255, 140, 105)", DARK_TEXT_COLOR],
+    ["pastel blue", "rgb(167, 199, 231)", DARK_TEXT_COLOR],
+    ["baby pink", "rgb(255, 217, 230)", DARK_TEXT_COLOR],
+    ["neon lime", "rgb(201, 237, 19)", DARK_TEXT_COLOR],
+    ["crimson red", "rgb(178, 34, 34)", LIGHT_TEXT_COLOR]
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";

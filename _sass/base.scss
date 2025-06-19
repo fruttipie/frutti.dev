@@ -391,6 +391,7 @@ nav {
     font-weight: bold;
     color: $backgroundColor;
     box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 }
 
