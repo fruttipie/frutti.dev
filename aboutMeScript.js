@@ -121,9 +121,11 @@ const exampleButtonColor = [
     ["pewter", "rgb(96, 98, 99)", LIGHT_TEXT_COLOR],
     ["salmon", "rgb(255, 140, 105)", DARK_TEXT_COLOR],
     ["pastel blue", "rgb(167, 199, 231)", DARK_TEXT_COLOR],
-    ["baby pink", "rgb(255, 217, 230)", DARK_TEXT_COLOR],
+    ["lila pink", "rgb(255, 217, 230)", DARK_TEXT_COLOR],
     ["neon lime", "rgb(201, 237, 19)", DARK_TEXT_COLOR],
-    ["crimson red", "rgb(178, 34, 34)", LIGHT_TEXT_COLOR]
+    ["crimson red", "rgb(178, 34, 34)", LIGHT_TEXT_COLOR],
+    ["tabby cat orange", "rgb(216, 144, 44)", LIGHT_TEXT_COLOR],
+    ["pastel yellow", "rgb(255, 237, 176)", DARK_TEXT_COLOR]
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";
