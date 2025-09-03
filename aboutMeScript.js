@@ -65,7 +65,7 @@ const aboutMeMessage2 = [
     "recommends 1000xResist",
     "snaps turn 1 in Marvel Snap",
     "is in Diablo IV's credits",
-    "studyied abroad in Japan",
+    "studied abroad in Japan",
     "is smart, talented, and humble",
     "is studying Japanese",
     "has attended 6 different colleges",
@@ -74,7 +74,8 @@ const aboutMeMessage2 = [
     "loves to drive and talk",
     "created the VGDC mascots",
     "日本語を勉強中",
-    "loves butter chicken"
+    "loves butter chicken",
+    "loves tomatoes"
 ];
 
 const exampleButtonColor = [
@@ -125,7 +126,8 @@ const exampleButtonColor = [
     ["neon lime", "rgb(201, 237, 19)", DARK_TEXT_COLOR],
     ["crimson red", "rgb(178, 34, 34)", LIGHT_TEXT_COLOR],
     ["tabby cat orange", "rgb(216, 144, 44)", LIGHT_TEXT_COLOR],
-    ["pastel yellow", "rgb(255, 237, 176)", DARK_TEXT_COLOR]
+    ["pastel yellow", "rgb(255, 237, 176)", DARK_TEXT_COLOR],
+    ["iris purple", "rgb(93, 63, 211)", LIGHT_TEXT_COLOR],
 ];
 
 const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";
