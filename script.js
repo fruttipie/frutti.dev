@@ -110,7 +110,7 @@ const welcomeMessages = [
     "フランチェスカです。",
     "いらっしゃい！",
     "おかえり！",
-    "I've got poket Aces",
+    "I've got pocket Aces",
     //"I'm going all in",
     "I have $3 to my name",
     "Six to One",
@@ -132,7 +132,9 @@ const welcomeMessages = [
     "サイトに来てありがとう！",
     "いらっしゃい！",
     "いらっしゃいませ。",
-    "ようこそ！"
+    "ようこそ！",
+    "Welcome to the Summoner's Rift",
+    "Pygmalien main"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
