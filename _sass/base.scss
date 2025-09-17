@@ -58,12 +58,22 @@ img, video {
   object-fit: contain;
 }
 
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
 h3 {
   font-weight: normal;
 }
 
+h4 {
+  color: $accentColor;
+  font-style: italic;
+}
+
 hr {
-  margin: 4rem 20%;
+  margin: 3rem 20%;
   border: 0.15rem solid $mediumColor;
   border-radius: 1rem;
 }
@@ -378,6 +388,34 @@ nav {
   }
 }
 
+.designProcessItem {
+    background-color: $accentColor;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    margin: 1.25rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: $backgroundColor;
+    max-width: 30%;
+    min-width: 300px;
+    text-align: center;
+    
+    h3 {
+      font-weight: bold;
+      font-size: 2rem;
+      color: $backgroundColor;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-style: italic;
+    }
+
+    strong {
+      color: $backgroundColor;
+    }
+  }
+
 .secret {
   font-style: italic;
   text-align: center;
@@ -556,16 +594,6 @@ footer {
   .topContainer {
     .gameTitle {
       font-size: 3rem;
-    }
-  }
-
-  .aboutMe {
-    .aboutMeItem {
-      max-width: 80%;
-
-      h1 {
-        font-size: 3rem;
-      }
     }
   }
 }

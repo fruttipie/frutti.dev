@@ -95,7 +95,6 @@ const welcomeMessages = [
     "Isaac and his Mother",
     "+4 Mult",
     //"+2",
-    "im a creep, im a weirdo",
     "quilboars!!!",
     "so cool!!!!",
     "a million murklies a day",

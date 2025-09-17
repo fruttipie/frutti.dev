@@ -14,7 +14,7 @@ const aboutMeMessage1 = [
     "a Diablo IV intern",
     "a Blizzard intern",
     "a VGDC design officer",
-    "a inagural SPARX intern",
+    "an inagural SPARX intern",
     "a minecraft enjoyer",
     "an alien",
     "a tainted lost player",
