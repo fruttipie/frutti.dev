@@ -35,7 +35,8 @@ const aboutMeMessage1 = [
     "the VGDC mascot creator",
     "つくば大の学生",
     "a TFT fiend",
-    "the team lead of drivetalk"
+    "the team lead of drivetalk",
+    "probably thinking about games now"
 ];
 
 const aboutMeMessage2 = [
@@ -75,7 +76,8 @@ const aboutMeMessage2 = [
     "created the VGDC mascots",
     "日本語を勉強中",
     "loves butter chicken",
-    "loves tomatoes"
+    "loves tomatoes",
+    "loves linguistics"
 ];
 
 const exampleButtonColor = [
