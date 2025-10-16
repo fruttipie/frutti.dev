@@ -222,7 +222,7 @@ nav {
   align-items: start;
   flex-flow: row wrap;  
   gap: 1%;
-  margin: 2rem;
+  margin: 0.5rem 5%;
 
   .game {
     max-width: 30%;
@@ -322,30 +322,8 @@ nav {
       background-color: #443ee7;
     }
 
-    .ARPG{
-      background-color: #ea5530;
-    }
-
-    .LiveService {
-      background-color: #458173;
-    }
-
-    // Engine Tags
-    .Unity {
-      background-color: #8d8d8d;
-    }
-
-    // Team Member Count Tags
-    .lessthan10 {
-      background-color: #8d8d8d;
-    }
-
-    .morethan10 {
-      background-color: #8d8d8d;
-    }
-    
-    .morethan40 {
-      background-color: #8d8d8d;
+    .Roguelike {
+      background-color: #d13c1e;
     }
   }
 }
