@@ -232,10 +232,12 @@ nav {
     margin: 1rem;
     transition: filter ease 0.1s;
     
-    filter: opacity(85%) grayscale(50%);
+    .hoverfilter {
+      filter: opacity(85%) grayscale(50%);
 
-    &:hover {
-      filter: opacity(100%)  grayscale(0%);
+      &:hover {
+        filter: opacity(100%)  grayscale(0%);
+      }
     }
 
     
@@ -593,7 +595,10 @@ footer {
     .game {
       min-width: 200px;
       max-width: 60%;
-      filter: none;
+      
+      .hoverfilter {
+        filter: none;
+      }
     }
   }
 
