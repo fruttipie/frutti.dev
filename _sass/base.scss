@@ -219,11 +219,10 @@ nav {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  align-items: center;
+  align-items: start;
   flex-flow: row wrap;  
   gap: 1%;
   margin: 2rem;
-
 
   .game {
     max-width: 30%;
@@ -231,17 +230,23 @@ nav {
     height: 25%;
     // margin: 1rem;
     margin: 1rem;
-  
+    transition: filter ease 0.1s;
+    
+    filter: opacity(85%) grayscale(50%);
+
+    &:hover {
+      filter: opacity(100%)  grayscale(0%);
+    }
+
+    
     img {
       @include borderRadius();
       width: 100%;
       height: 100%;
       display: block;
       // filter:brightness(0.9) grayscale(.25);
-      transition: filter ease 0.1s;
 
       &:hover {
-        filter: opacity(85%);
         cursor: pointer;
       }
     }
@@ -254,6 +259,94 @@ nav {
     white-space: nowrap;
     margin-top: 0.5rem;
     text-align: center;
+    filter: none;
+  }
+
+  h2 {
+    margin: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    filter: none;
+  }
+
+  .tags {
+    display: flex;
+    flex-flow: row wrap;  
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 0.5rem 0.15rem 0rem;
+      padding: 0.4rem 0.65rem;
+      color: $backgroundColor;
+      background-color: none;
+      border-radius: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    // Role Tags
+    .TeamLead {
+      background-color: $accentColor;
+    }
+
+    .Art {
+      background-color: #e2418f;
+    }
+
+    .SystemsDesign {
+      background-color: #3b94f9;
+    }
+
+    .CombatDesign {
+      background-color: #35bb59;
+    }
+
+    .Internship {
+      background-color: $accentColor;
+    }
+
+    //Genre Tags
+    .Party {
+      background-color: #dd45d5;
+    }
+
+    .Narrative{
+      background-color: #efa434;
+    }
+
+    .FPS{
+      background-color: #443ee7;
+    }
+
+    .ARPG{
+      background-color: #ea5530;
+    }
+
+    .LiveService {
+      background-color: #458173;
+    }
+
+    // Engine Tags
+    .Unity {
+      background-color: #8d8d8d;
+    }
+
+    // Team Member Count Tags
+    .lessthan10 {
+      background-color: #8d8d8d;
+    }
+
+    .morethan10 {
+      background-color: #8d8d8d;
+    }
+    
+    .morethan40 {
+      background-color: #8d8d8d;
+    }
   }
 }
 
@@ -522,6 +615,7 @@ footer {
     .game {
       min-width: 200px;
       max-width: 60%;
+      filter: none;
     }
   }
 
