@@ -453,7 +453,7 @@ nav {
   }
 
   .gameAsset {
-    max-width: 60%;
+    max-width: 50%;
     min-width: 50%;
     margin: 1rem;
     object-fit: fill;
@@ -620,9 +620,9 @@ footer {
 }
 
 // Giant monitors
-@media screen and (min-width: 2500px) {
+@media screen and (min-width: 2000px) {
   html {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   .designProcessItem {
