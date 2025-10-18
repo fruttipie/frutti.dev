@@ -1,6 +1,7 @@
 @import 'colors';
 
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$fontSize: 1rem;
 
 /* This SCSS file covers everything in the default layout */
 
@@ -22,7 +23,7 @@ $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-seri
 }
 
 @mixin icon {
-  font-size: 1.5rem;
+  font-size: $fontSize * 1.5;
 }
 
 @mixin mainPageDisplay {
@@ -59,7 +60,7 @@ img, video {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: $fontSize * 3;
   text-align: center;
 }
 
@@ -112,7 +113,7 @@ nav {
     @include mainPageDisplay;
 
     li {
-      font-size: 1.5rem;
+      font-size: $fontSize * 1.5;
       margin: 0rem 0.15rem;
       
       a {
@@ -123,7 +124,7 @@ nav {
       }
 
       button {
-        font-size: 1.5rem;
+        font-size: $fontSize * 1.5;
         border: none;
         color: $backgroundColor;
         padding: 0.5rem;
@@ -149,7 +150,7 @@ nav {
     }
 
     .title { // commented out stuff is from old title that would change if you clicked it
-      font-size: 2rem;
+      font-size: $fontSize * 2;
       font-weight: bold;
       // width: 20rem;
       text-align: center;
@@ -168,7 +169,7 @@ nav {
       font-weight: bold;
       text-align: center;
       @include clickable;
-      font-size: 1.25rem;
+      font-size: $fontSize * 1.25;
       background-color: $accentColor2;
 
       &:hover {
@@ -208,13 +209,17 @@ nav {
   margin-top: -0.75rem;
 }
 
+.topPadding {
+    padding-top: 4rem;
+  }
+
 .flex {
   display: flex !important;
 }
 
 .hamburgerLink a {
   @include clickable;
-  font-size: 1.5rem;
+  font-size: $fontSize * 1.5;
   line-height: 3.75rem;
   margin: 1rem;
   background-color: $accentColor;
@@ -223,18 +228,17 @@ nav {
 // Home
 
 .homePageIntro {
-
   text-align: center;
   margin-top: 2rem;
 
   h1 {
-    font-size: 4rem;
+    font-size: $fontSize * 4;
     font-weight:900;
     //font-style: italic;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: $fontSize * 2.5;
   }
 }
 
@@ -279,7 +283,7 @@ nav {
 
   figcaption {
     line-height: 1.75rem;
-    font-size: 1.75rem;
+    font-size: $fontSize * 1.75;
     font-weight: bold;
     white-space: nowrap;
     margin-top: 0.5rem;
@@ -289,7 +293,7 @@ nav {
 
   h2 {
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: $fontSize * 2;
     font-weight: bold;
     white-space: nowrap;
     text-align: center;
@@ -361,14 +365,14 @@ nav {
 
 // individual game pages
 
-.topContainer {
+.titleContainer {
   display: flex; 
   justify-content: center;
   align-items: center;
   gap: 5%;
 
   .gameTitle {
-    font-size: 4rem;
+    font-size: $fontSize * 4;
     margin: 2rem;
     text-align: center;
     //text-transform: uppercase;
@@ -377,7 +381,7 @@ nav {
   .playButton {
     @include clickable();
     background-color: $accentColor;
-    font-size: 1.75rem;
+    font-size: $fontSize * 1.75;
     padding: 1.5rem 1.75rem;
 
     &:hover {
@@ -399,7 +403,7 @@ nav {
     min-width: 300px;
     max-width: 35%;
     margin: 0 1rem;
-    font-size: 1.25rem;
+    font-size: $fontSize * 1.25;
     line-height: 2rem;
 
     li {
@@ -408,7 +412,7 @@ nav {
     }
 
     .sectionTitle {
-      font-size: 2.5rem;
+      font-size: $fontSize * 2.5;
     }
     
     .importantItem {
@@ -430,7 +434,7 @@ nav {
   }
 
   figcaption {
-    font-size: 1.25rem;
+    font-size: $fontSize * 1.25;
     text-align: center;
     font-style: italic;
   }
@@ -445,7 +449,7 @@ nav {
 
 .aboutMe {
   list-style-type: none;
-  font-size: 1.75rem;
+  font-size: $fontSize * 1.75;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,7 +476,7 @@ nav {
 
     figcaption {
       line-height: 1.75rem;
-      font-size: 1.75rem;
+      font-size: $fontSize * 1.75;
       font-weight: bold;
       white-space: nowrap;
       margin-top: 0.5rem;
@@ -503,7 +507,7 @@ nav {
 
 .designProcessItem {
     background-color: $accentColor;
-    font-size: 1.25rem;
+    font-size: $fontSize * 1.25;
     padding: 1rem 1.5rem;
     margin: 1.25rem;
     border-radius: 1.5rem;
@@ -516,7 +520,7 @@ nav {
     
     h2 {
       font-weight: bold;
-      font-size: 2rem;
+      font-size: $fontSize * 2;
       color: $backgroundColor;
       margin-bottom: 0.5rem;
     }
@@ -534,7 +538,7 @@ nav {
   font-style: italic;
   text-align: center;
   margin: 0 5% 3rem;
-  font-size: 1.5rem;
+  font-size: $fontSize * 1.5;
 
   #exampleCustomizable {
     @include clickable();
@@ -574,13 +578,13 @@ footer {
 #backToTop {
   display: none;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: $fontSize * 1.5;
 }
 
 #bottomLinks {
   display: none;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: $fontSize * 1.5;
   gap: 1%;
   margin-bottom: 1rem;
 }
@@ -590,7 +594,7 @@ footer {
     display: none !important;
 }
 
-// Mobile Responsiveness
+// Mobile & 4K Responsiveness
 
 .onlyOnMobile{
   display: none;
@@ -599,6 +603,18 @@ footer {
 .onlyOnSmallestMobile{
   display: none;
 }
+
+// Giant monitors
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 2rem;
+  }
+
+  .designProcessItem {
+    flex-basis: 100%;
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   .onlyOnMobile{
@@ -621,7 +637,7 @@ footer {
     }
 
     .title {
-      font-size: 1rem;
+      font-size: $fontSize * 1;
       min-width: 12rem;
     }
   }
@@ -639,7 +655,7 @@ footer {
     }
   }
 
-  .topContainer {
+  .titleContainer {
     flex-direction: column;
     gap: 0;
     
@@ -696,7 +712,7 @@ footer {
     }
 
     figcaption {
-      //font-size: 1.25rem;
+      //font-size: $fontSize * 1.25;
       white-space: normal;
     }
   }
@@ -707,9 +723,9 @@ footer {
     }
   }
 
-  .topContainer {
+  .titleContainer {
     .gameTitle {
-      font-size: 3rem;
+      font-size: $fontSize * 3;
     }
   }
 }
