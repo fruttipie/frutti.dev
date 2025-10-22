@@ -223,7 +223,7 @@ nav {
 
 .topPadding {
     padding-top: 5rem;
-  }
+}
 
 .flex {
   display: flex !important;
@@ -251,6 +251,11 @@ nav {
 
   h2 {
     font-size: $fontSize * 2.5;
+
+    .homePageName {
+      color: hsl(270, 6%, 13%);
+      text-decoration: underline;
+    }
   }
 }
 
@@ -532,34 +537,44 @@ nav {
   }
 }
 
-.designProcessItem {
-    //background-color: $accentColor;
-    font-size: $fontSize * 1.25;
-    padding: 1rem 1.5rem;
-    margin: 1.25rem;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    color: $backgroundColor;
-    max-width: 33%;
-    min-width: 275px;
-    text-align: center;
-    flex-basis: 0%;
-    
-    h2 {
-      font-weight: bold;
-      font-size: $fontSize * 2;
-      color: $backgroundColor;
-      margin-bottom: 0.5rem;
-    }
+.designProcessContainer {
+    display: flex;
+    flex-flow: row wrap;  
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    //gap: 1%;
+    margin: 0rem 5% 2rem;
 
-    p {
-      font-style: italic;
-    }
-
-    strong {
+  .designProcessItem {
+      //background-color: $accentColor;
+      font-size: $fontSize * 1.25;
+      padding: 1rem 1.5rem;
+      margin: 1.25rem;
+      border-radius: 1.5rem;
+      text-decoration: none;
       color: $backgroundColor;
+      max-width: 33%;
+      min-width: 275px;
+      text-align: center;
+      flex-basis: 0%;
+      
+      h2 {
+        font-weight: bold;
+        font-size: $fontSize * 2;
+        color: $backgroundColor;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-style: italic;
+      }
+
+      strong {
+        color: $backgroundColor;
+      }
     }
-  }
+}
 
 .secret {
   font-style: italic;
@@ -642,7 +657,7 @@ footer {
   }
 }
 
-
+// phones & tablets
 @media screen and (max-width: 1000px) {
   .onlyOnMobile{
     display: block;
@@ -669,12 +684,18 @@ footer {
     }
   }
 
+  .topPadding {
+    padding-top: 4rem;
+  }
+
   .homePageGames {
     //flex-direction: column;
 
     .game {
       min-width: 200px;
-      max-width: 60%;
+      max-width: 100%;
+      margin: 1rem 0;
+
       
       .hoverfilter {
         filter: none;
@@ -695,12 +716,13 @@ footer {
     flex-direction: column;
 
     .item {
-      min-width: 85%;
-      margin: 1rem;
+      min-width: 100%;
+      margin: 1rem 0;
     }
 
     .gameAsset {
-      max-width: 70%;
+      max-width: 100%;
+      margin: 1rem 0;
     }
   }
 
@@ -710,7 +732,11 @@ footer {
     padding: 0;
 
     .aboutMeItem {
-      max-width: 55%;
+      max-width: 100%;
+    }
+
+    .designProcessContainer {
+      align-content: center;
     }
   }
 
@@ -731,7 +757,11 @@ footer {
   .onlyOnSmallestMobile {
   display: block;
   }
-  
+
+  h2 .homePageName {
+    font-size: $fontSize * 3.5;
+  }
+
   .homePageGames {
     .game {
       min-width: 100px;
