@@ -429,8 +429,12 @@ nav {
 
     li {
       margin-left: 2rem;
-      
     }
+
+    .subli {
+        margin-left: 4rem;
+        font-style: italic;
+      }
 
     .sectionTitle {
       font-size: $fontSize * 2.5;
