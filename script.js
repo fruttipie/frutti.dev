@@ -51,6 +51,7 @@ const welcomeMessages = [
     "stay awhile and listen!",
     "how's it hanging?",
     "Isaac, we love you",
+    "A deal with the devil",
     "land lubber ♡",
     //"what the fart?",
     "✧polychrome✧",

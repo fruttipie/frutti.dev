@@ -36,7 +36,8 @@ const aboutMeMessage1 = [
     "つくば大の学生",
     "a TFT fiend",
     "the team lead of drivetalk",
-    "probably thinking about games now"
+    "probably thinking about games now",
+    "currently working at NVIDIA"
 ];
 
 const aboutMeMessage2 = [
@@ -50,7 +51,6 @@ const aboutMeMessage2 = [
     "uses Twitter a lot",
     "has 4 cats",
     "loves learning",
-    "graduates soon",
     "loves to sleep in",
     "makes games",
     "is a big Hatsune Miku fan",
