@@ -77,7 +77,8 @@ const aboutMeMessage2 = [
     "日本語を勉強中",
     "loves butter chicken",
     "loves tomatoes",
-    "loves linguistics"
+    "loves linguistics",
+    "has 1500+ hours in roguelikes"
 ];
 
 const exampleButtonColor = [
@@ -109,7 +110,7 @@ const exampleButtonColor = [
     ["cyan", "rgb(12, 199, 183)", DARK_TEXT_COLOR],
     ["cobalt", "rgb(14, 82, 176)", LIGHT_TEXT_COLOR],
     ["sky blue", "rgb(130, 199, 229)", DARK_TEXT_COLOR],
-    ["cornflower blue", "rgb(84, 143, 232)", DARK_TEXT_COLOR],
+    ["cornflower blue", "rgb(84, 143, 232)", LIGHT_TEXT_COLOR],
     ["powder blue", "rgb(184, 227, 233)", DARK_TEXT_COLOR],
     ["jade green", "rgb(7, 173, 98)", LIGHT_TEXT_COLOR],
     ["sand colored", "rgb(203, 189, 147)", DARK_TEXT_COLOR],
@@ -166,6 +167,7 @@ aboutMe1El.addEventListener("click", (e) => {
     e.preventDefault();
     console.info("Reloading");
     updateInnerText1();
+    stopShake();
 });
 
 const updateInnerText2 = () => {
@@ -196,6 +198,7 @@ aboutMe2El.addEventListener("click", (e) => {
     e.preventDefault();
     console.info("Reloading");
     updateInnerText2();
+    stopShake();
 });
 
 const makeExampleButtonRandomColor = () => {
@@ -241,21 +244,26 @@ exampleButtonEl.addEventListener("click", (e) => {
     e.preventDefault();
     console.info("Reloading");
     makeExampleButtonRandomColor();
+    stopShake();
 });
 
-/* 
-// I want to make it so that it cycles through the same ones over and over rather than being random.
-// dunno what im missing here...
-const ABOUT_ME_1_ELEMENT_ID = "aboutMe1";
-const aboutMe1El = document.getElementById(ABOUT_ME_1_ELEMENT_ID);
-const aboutMe1Index = 0;
+welcomeEl.addEventListener("click", (e) => {
+    stopShake();
+});
 
-const updateInnerText = () => {
-    aboutMe1El.innerText = aboutMeMessage1[aboutMe1Index];
-    if (aboutMe1Index >= aboutMeMessage1.length) {
-        aboutMe1Index = 0;
-    } else {
-        aboutMe1Index++;
-    }
-};
-*/
+// Button shaking!
+
+let interval = setInterval(() => {
+  aboutMe1El.classList.add("shake");
+
+  // Remove class after animation ends so it can be triggered again
+  setTimeout(() => {
+    aboutMe1El.classList.remove("shake");
+  }, 1000);
+}, 4000);
+
+// Stop shaking after click
+function stopShake() {
+    clearInterval(interval);
+    aboutMe1El.classList.remove("shake");
+}

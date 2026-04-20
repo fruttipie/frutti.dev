@@ -60,7 +60,7 @@ img, video {
 }
 
 h1 {
-  font-size: $fontSize * 3;
+  font-size: $fontSize * 2.75;
   text-align: center;
 }
 
@@ -183,6 +183,7 @@ nav {
       @include clickable;
       font-size: $fontSize * 1.25;
       background-color: $accentColor2;
+      color: $bodyColor;
 
       &:hover {
         background-color: $accentColor2;
@@ -241,7 +242,7 @@ nav {
 
 .homePageIntro {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   h1 {
     font-size: $fontSize * 4;
@@ -250,11 +251,11 @@ nav {
   }
 
   h2 {
-    font-size: $fontSize * 2.5;
+    font-size: $fontSize * 3;
 
     .homePageName {
       color: hsl(270, 6%, 13%);
-      text-decoration: underline;
+      //text-decoration: underline;
     }
   }
 }
@@ -490,6 +491,7 @@ nav {
   .customizable {
     @include clickable;
     background-color: $accentColor2;
+    color: $bodyColor;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     line-height: 2rem;
@@ -525,9 +527,14 @@ nav {
     .customizaAboutMe {
       margin-top: 2rem;
       
+      
       p {
-        display: inline;
         line-height: 2.2em;
+        display: inline;
+      }
+
+      .customizable {
+        display: inline-block;
       }
     }
   }
@@ -537,6 +544,8 @@ nav {
   }
 }
 
+/*
+Not in use anymore:
 .designProcessContainer {
     display: flex;
     flex-flow: row wrap;  
@@ -575,6 +584,19 @@ nav {
       }
     }
 }
+*/
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
 
 .secret {
   font-style: italic;
@@ -587,7 +609,7 @@ nav {
     background-color: $accentColor2;
     font-style: normal;
     font-weight: bold;
-    color: $backgroundColor;
+    color: $bodyColor;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }

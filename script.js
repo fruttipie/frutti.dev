@@ -134,7 +134,8 @@ const welcomeMessages = [
     "いらっしゃいませ。",
     "ようこそ！",
     "Welcome to the Summoner's Rift",
-    "Pygmalien main"
+    "Pygmalien main",
+    "The Bazaar's a crazy place"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
