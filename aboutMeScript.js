@@ -259,8 +259,8 @@ let interval = setInterval(() => {
   // Remove class after animation ends so it can be triggered again
   setTimeout(() => {
     aboutMe1El.classList.remove("shake");
-  }, 1000);
-}, 4000);
+  }, 800);
+}, 2500);
 
 // Stop shaking after click
 function stopShake() {
