@@ -1,4 +1,4 @@
-@use 'colors';
+@import 'colors';
 
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, just change this.
@@ -11,7 +11,7 @@ $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, ju
   text-decoration: none;
   transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
-  color: colors.$background;
+  color: $background;
 
   &:hover {
     cursor: pointer;
@@ -43,12 +43,12 @@ $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, ju
 }
 
 html {
-  background: colors.$body;
+  background: $body;
 }
 
 body {
-  background: colors.$background;
-  color: colors.$body;
+  background: $background;
+  color: $body;
   font-family: $bodyFont;
 }
 
@@ -69,41 +69,41 @@ h3 {
 }
 
 h4 {
-  color: colors.$accent1;
+  color: $accent1;
   font-style: italic;
 }
 
 hr {
   margin: 2.5rem 20%;
-  border: 0.15rem solid colors.$medium;
+  border: 0.15rem solid $medium;
   border-radius: 1rem;
 }
 
 strong {
-  color: colors.$accent1;
+  color: $accent1;
 }
 
 // Highlights
 ::selection, ::-moz-selection {
-  background-color: colors.$accent1;
-  color: colors.$background;
+  background-color: $accent1;
+  color: $background;
 }
 
-// Since I chose colors.$accent1 as my highlight color,
-// we need to make things that have a background-color of colors.$accent1 NOT highlight with colors.$accent1 anymore!
+// Since I chose $accent1 as my highlight color,
+// we need to make things that have a background-color of $accent1 NOT highlight with $accent1 anymore!
 
 .redBackgroundColor {
-  background-color: colors.$accent1;
+  background-color: $accent1;
 
   ::selection, ::-moz-selection {
-    background-color: colors.$accent2;
-    color: colors.$background;
+    background-color: $accent2;
+    color: $background;
 }
 }
 
 .quote {
   font-style: italic;
-  color: colors.$accent1;
+  color: $accent1;
   font-size: larger;
   font-weight: bolder;
 }
@@ -112,13 +112,13 @@ strong {
 
 nav {
   overflow: hidden;
-  background-color: colors.$body;
+  background-color: $body;
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: colors.$background;
+  color: $background;
   z-index: 2;
 
   ul {
@@ -131,23 +131,23 @@ nav {
       a {
         @include clickable;
         &:hover {
-          background-color: colors.$accent1;
+          background-color: $accent1;
         }
       }
 
       button {
         font-size: $fontSize * 1.5;
         border: none;
-        color: colors.$background;
+        color: $background;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        background-color: colors.$body;
+        background-color: $body;
         height: 49px;
         width: 49px;
         transition: background-color ease 0.2s;
         
         &:hover {
-          background-color: colors.$accent1;
+          background-color: $accent1;
           cursor: pointer;
         }
       }
@@ -171,8 +171,8 @@ nav {
         transition: color ease 0.2s;
 
         &:hover {
-          // color: colors.$accent2;
-          background-color: colors.$body;
+          // color: $accent2;
+          background-color: $body;
         }
       }
     }
@@ -182,11 +182,11 @@ nav {
       text-align: center;
       @include clickable;
       font-size: $fontSize * 1.25;
-      background-color: colors.$accent2;
-      color: colors.$body;
+      background-color: $accent2;
+      color: $body;
 
       &:hover {
-        background-color: colors.$accent2;
+        background-color: $accent2;
       }
     }
   }
@@ -202,7 +202,7 @@ nav {
       padding: 0.75rem;
 
       &:hover {
-        background-color: colors.$accent1;
+        background-color: $accent1;
       }
     }
   }
@@ -213,7 +213,7 @@ nav {
   display: none;
   position: fixed;
   flex-direction: column;
-  background-color: colors.$body;
+  background-color: $body;
   z-index: 3; // to make it be above the nav bar
   width: 100%;
   justify-content: center; // this is doing nothing???
@@ -235,7 +235,7 @@ nav {
   font-size: $fontSize * 1.5;
   line-height: 3.75rem;
   margin: 1rem;
-  //background-color: colors.$accent1;
+  //background-color: $accent1;
 }
 
 // Home
@@ -332,7 +332,7 @@ nav {
     li {
       margin: 0.75rem 0.15rem 0rem;
       padding: 0.4rem 0.65rem;
-      color: colors.$background;
+      color: $background;
       background-color: none;
       border-radius: 1rem;
       font-weight: bold;
@@ -341,7 +341,7 @@ nav {
 
     // Role Tags
     .TeamLead {
-      background-color: colors.$accent1;
+      background-color: $accent1;
     }
 
     .Art {
@@ -365,7 +365,7 @@ nav {
     }
 
     .Internship {
-      background-color: colors.$accent1;
+      background-color: $accent1;
     }
 
     //Genre Tags
@@ -390,7 +390,7 @@ nav {
 .borderMedia {
   border: 3px;
   border-style: solid;
-  border-color: colors.$medium;
+  border-color: $medium;
 }
 
 // individual game pages
@@ -410,12 +410,12 @@ nav {
 
   .playButton {
     @include clickable();
-    background-color: colors.$accent1;
+    background-color: $accent1;
     font-size: $fontSize * 1.75;
     padding: 1.5rem 1.75rem;
 
     &:hover {
-      background-color: colors.$accent2;
+      background-color: $accent2;
     }
   }
 }
@@ -493,8 +493,8 @@ nav {
 
   .customizable {
     @include clickable;
-    background-color: colors.$accent2;
-    color: colors.$body;
+    background-color: $accent2;
+    color: $body;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     line-height: 2rem;
@@ -559,13 +559,13 @@ Not in use anymore:
     margin: 0rem 5% 2rem;
 
   .designProcessItem {
-      //background-color: colors.$accent1;
+      //background-color: $accent1;
       font-size: $fontSize * 1.25;
       padding: 1rem 1.5rem;
       margin: 1.25rem;
       border-radius: 1.5rem;
       text-decoration: none;
-      color: colors.$background;
+      color: $background;
       max-width: 33%;
       min-width: 275px;
       text-align: center;
@@ -574,7 +574,7 @@ Not in use anymore:
       h2 {
         font-weight: bold;
         font-size: $fontSize * 2;
-        color: colors.$background;
+        color: $background;
         margin-bottom: 0.5rem;
       }
 
@@ -583,7 +583,7 @@ Not in use anymore:
       }
 
       strong {
-        color: colors.$background;
+        color: $background;
       }
     }
 }
@@ -609,18 +609,18 @@ Not in use anymore:
 
   #exampleCustomizable {
     @include clickable();
-    background-color: colors.$accent2;
+    background-color: $accent2;
     font-style: normal;
     font-weight: bold;
-    color: colors.$body;
+    color: $body;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
 }
 
 footer {
-  background-color: colors.$body;
-  color: colors.$background;
+  background-color: $body;
+  color: $background;
   text-align: center;
   padding: 1.25rem;
   margin-top: 0.5rem 0;
@@ -633,7 +633,7 @@ footer {
   a {
     @include clickable;      
     &:hover {
-      background-color: colors.$accent1;
+      background-color: $accent1;
     }
   }
 
@@ -726,7 +726,7 @@ footer {
   }
 
   figcaption {
-    color: colors.$background;
+    color: $background;
     font-size: $fontSize * 1.5;
     margin-top: 1.25rem;
     text-align: center;
