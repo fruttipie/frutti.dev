@@ -6,6 +6,7 @@ const aboutMeMessage1 = [
     "confused",
     "a game designer",
     "a digital artist",
+    "a 2D artist",
     "a rogue-like fanatic",
     "a cat lover",
     "a murloc enthusiast",
@@ -46,7 +47,7 @@ const aboutMeMessage2 = [
     "loves Peter the Anteater",
     "really appreciates you stopping by",
     "dyes her hair a ton of colors",
-    "currently has green hair",
+    "currently has pink hair",
     "loves fun facts",
     "uses Twitter a lot",
     "has 4 cats",
@@ -61,7 +62,7 @@ const aboutMeMessage2 = [
     "loves playing Captain Hoggar",
     "used to be a C++ tutor",
     "has beaten Diablo 1",
-    "is a digital artist of 14+ years",
+    "is a self-taught digital artist of 14+ years",
     "loves in-n-out burger",
     "recommends 1000xResist",
     "snaps turn 1 in Marvel Snap",
@@ -78,7 +79,10 @@ const aboutMeMessage2 = [
     "loves butter chicken",
     "loves tomatoes",
     "loves linguistics",
-    "has 1500+ hours in roguelikes"
+    "has 1500+ hours in roguelikes",
+    "has a cute cat named Maybe",
+    "always wins with Riichi",
+    "loves the Tokyo Bus mascot, Minkuru"
 ];
 
 const exampleButtonColor = [

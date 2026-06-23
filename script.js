@@ -103,7 +103,6 @@ const welcomeMessages = [
     "YEAHHHH!!!!",
     "AAAAAAHHHH!!!",
     "wizard frog",
-    "$accentColor2",
     "my hubris scares me",
     "MIKU MIKU BEAM!",
     "おはよう!",
@@ -135,7 +134,10 @@ const welcomeMessages = [
     "ようこそ！",
     "Welcome to the Summoner's Rift",
     "Pygmalien main",
-    "The Bazaar's a crazy place"
+    "The Bazaar's a crazy place",
+    "RIICHI!!!",
+    "RON!!!",
+    "TSUMO!!!"
 ];
 const CUSTOM_GREETING_ELEMENT_ID = "welcome";
 const customGreetingEl = document.getElementById(CUSTOM_GREETING_ELEMENT_ID);
@@ -177,4 +179,32 @@ addEventListener("resize", (e) => {
     if (document.getElementById("hamburgerIcon").classList.contains("fa-xmark")) {
         toggleHamburgerMenu();
     }
+});
+
+//Art Page Gallery
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImage.src = img.src;
+
+    const caption =
+      img.closest('.gallery-item').querySelector('figcaption').textContent;
+
+    lightboxCaption.textContent = caption;
+
+    lightbox.classList.add('active');
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.classList.remove('active');
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+    lightbox.classList.remove('active');
+  }
 });

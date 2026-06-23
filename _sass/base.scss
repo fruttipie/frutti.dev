@@ -1,4 +1,4 @@
-@import 'colors';
+@use 'colors';
 
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, just change this.
@@ -11,7 +11,7 @@ $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, ju
   text-decoration: none;
   transition: background-color ease 0.2s;
   padding: 0.75rem 1rem;
-  color: $backgroundColor;
+  color: colors.$background;
 
   &:hover {
     cursor: pointer;
@@ -43,12 +43,12 @@ $fontSize: 1rem; //if i wanna change the font size of EVERYTHING uniformally, ju
 }
 
 html {
-  background: $bodyColor;
+  background: colors.$body;
 }
 
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
+  background: colors.$background;
+  color: colors.$body;
   font-family: $bodyFont;
 }
 
@@ -69,41 +69,41 @@ h3 {
 }
 
 h4 {
-  color: $accentColor;
+  color: colors.$accent1;
   font-style: italic;
 }
 
 hr {
   margin: 2.5rem 20%;
-  border: 0.15rem solid $mediumColor;
+  border: 0.15rem solid colors.$medium;
   border-radius: 1rem;
 }
 
 strong {
-  color: $accentColor;
+  color: colors.$accent1;
 }
 
 // Highlights
 ::selection, ::-moz-selection {
-  background-color: $accentColor;
-  color: $backgroundColor;
+  background-color: colors.$accent1;
+  color: colors.$background;
 }
 
-// Since I chose $accentColor as my highlight color,
-// we need to make things that have a background-color of $accentColor NOT highlight with $accentColor anymore!
+// Since I chose colors.$accent1 as my highlight color,
+// we need to make things that have a background-color of colors.$accent1 NOT highlight with colors.$accent1 anymore!
 
 .redBackgroundColor {
-  background-color: $accentColor;
+  background-color: colors.$accent1;
 
   ::selection, ::-moz-selection {
-    background-color: $accentColor2;
-    color: $backgroundColor;
+    background-color: colors.$accent2;
+    color: colors.$background;
 }
 }
 
 .quote {
   font-style: italic;
-  color: $accentColor;
+  color: colors.$accent1;
   font-size: larger;
   font-weight: bolder;
 }
@@ -112,13 +112,13 @@ strong {
 
 nav {
   overflow: hidden;
-  background-color: $bodyColor;
+  background-color: colors.$body;
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: $backgroundColor;
+  color: colors.$background;
   z-index: 2;
 
   ul {
@@ -131,23 +131,23 @@ nav {
       a {
         @include clickable;
         &:hover {
-          background-color: $accentColor;
+          background-color: colors.$accent1;
         }
       }
 
       button {
         font-size: $fontSize * 1.5;
         border: none;
-        color: $backgroundColor;
+        color: colors.$background;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        background-color: $bodyColor;
+        background-color: colors.$body;
         height: 49px;
         width: 49px;
         transition: background-color ease 0.2s;
         
         &:hover {
-          background-color: $accentColor;
+          background-color: colors.$accent1;
           cursor: pointer;
         }
       }
@@ -171,8 +171,8 @@ nav {
         transition: color ease 0.2s;
 
         &:hover {
-          // color: $accentColor2;
-          background-color: $bodyColor;
+          // color: colors.$accent2;
+          background-color: colors.$body;
         }
       }
     }
@@ -182,11 +182,11 @@ nav {
       text-align: center;
       @include clickable;
       font-size: $fontSize * 1.25;
-      background-color: $accentColor2;
-      color: $bodyColor;
+      background-color: colors.$accent2;
+      color: colors.$body;
 
       &:hover {
-        background-color: $accentColor2;
+        background-color: colors.$accent2;
       }
     }
   }
@@ -202,7 +202,7 @@ nav {
       padding: 0.75rem;
 
       &:hover {
-        background-color: $accentColor;
+        background-color: colors.$accent1;
       }
     }
   }
@@ -213,7 +213,7 @@ nav {
   display: none;
   position: fixed;
   flex-direction: column;
-  background-color: $bodyColor;
+  background-color: colors.$body;
   z-index: 3; // to make it be above the nav bar
   width: 100%;
   justify-content: center; // this is doing nothing???
@@ -235,14 +235,14 @@ nav {
   font-size: $fontSize * 1.5;
   line-height: 3.75rem;
   margin: 1rem;
-  //background-color: $accentColor;
+  //background-color: colors.$accent1;
 }
 
 // Home
 
 .homePageIntro {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 
   h1 {
     font-size: $fontSize * 4;
@@ -276,13 +276,16 @@ nav {
     object-fit: fill;
     // margin: 1rem;
     margin: 1rem;
-    transition: filter ease 0.1s;
-    
+    //transition: filter ease 0.1s; This is the old dimming filter on hover stuff
+
     .hoverfilter {
-      filter: opacity(85%) grayscale(50%);
+      transition: transform 0.2s ease;
+      //filter: opacity(100%)  grayscale(0%); This is the old dimming filter on hover stuff
 
       &:hover {
-        filter: opacity(100%)  grayscale(0%);
+        //filter: opacity(65%) grayscale(25%); This is the old dimming filter on hover stuff
+        transform: scale(1.05);
+
       }
     }
 
@@ -327,9 +330,9 @@ nav {
     align-items: center;
 
     li {
-      margin: 0.5rem 0.15rem 0rem;
+      margin: 0.75rem 0.15rem 0rem;
       padding: 0.4rem 0.65rem;
-      color: $backgroundColor;
+      color: colors.$background;
       background-color: none;
       border-radius: 1rem;
       font-weight: bold;
@@ -338,7 +341,7 @@ nav {
 
     // Role Tags
     .TeamLead {
-      background-color: $accentColor;
+      background-color: colors.$accent1;
     }
 
     .Art {
@@ -362,7 +365,7 @@ nav {
     }
 
     .Internship {
-      background-color: $accentColor;
+      background-color: colors.$accent1;
     }
 
     //Genre Tags
@@ -387,7 +390,7 @@ nav {
 .borderMedia {
   border: 3px;
   border-style: solid;
-  border-color: $mediumColor;
+  border-color: colors.$medium;
 }
 
 // individual game pages
@@ -407,12 +410,12 @@ nav {
 
   .playButton {
     @include clickable();
-    background-color: $accentColor;
+    background-color: colors.$accent1;
     font-size: $fontSize * 1.75;
     padding: 1.5rem 1.75rem;
 
     &:hover {
-      background-color: $accentColor2;
+      background-color: colors.$accent2;
     }
   }
 }
@@ -490,8 +493,8 @@ nav {
 
   .customizable {
     @include clickable;
-    background-color: $accentColor2;
-    color: $bodyColor;
+    background-color: colors.$accent2;
+    color: colors.$body;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     line-height: 2rem;
@@ -556,13 +559,13 @@ Not in use anymore:
     margin: 0rem 5% 2rem;
 
   .designProcessItem {
-      //background-color: $accentColor;
+      //background-color: colors.$accent1;
       font-size: $fontSize * 1.25;
       padding: 1rem 1.5rem;
       margin: 1.25rem;
       border-radius: 1.5rem;
       text-decoration: none;
-      color: $backgroundColor;
+      color: colors.$background;
       max-width: 33%;
       min-width: 275px;
       text-align: center;
@@ -571,7 +574,7 @@ Not in use anymore:
       h2 {
         font-weight: bold;
         font-size: $fontSize * 2;
-        color: $backgroundColor;
+        color: colors.$background;
         margin-bottom: 0.5rem;
       }
 
@@ -580,7 +583,7 @@ Not in use anymore:
       }
 
       strong {
-        color: $backgroundColor;
+        color: colors.$background;
       }
     }
 }
@@ -606,18 +609,18 @@ Not in use anymore:
 
   #exampleCustomizable {
     @include clickable();
-    background-color: $accentColor2;
+    background-color: colors.$accent2;
     font-style: normal;
     font-weight: bold;
-    color: $bodyColor;
+    color: colors.$body;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
 }
 
 footer {
-  background-color: $bodyColor;
-  color: $backgroundColor;
+  background-color: colors.$body;
+  color: colors.$background;
   text-align: center;
   padding: 1.25rem;
   margin-top: 0.5rem 0;
@@ -630,7 +633,7 @@ footer {
   a {
     @include clickable;      
     &:hover {
-      background-color: $accentColor;
+      background-color: colors.$accent1;
     }
   }
 
@@ -658,7 +661,92 @@ footer {
     display: none !important;
 }
 
+// Art page photo gallery stuff
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0.5rem 5%;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: zoom-in;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.2s ease;
+  padding: 5%;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  figcaption {
+    display: none;
+  }
+}
+
+.wide {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.tall {
+  grid-row: span 2;
+  aspect-ratio: 1 / 2;
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: 1 / 1;
+}
+
+  // Lightbox 
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+
+  img {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+  figcaption {
+    color: colors.$background;
+    font-size: $fontSize * 1.5;
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+}
+
+.lightbox.active {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+//
 // Mobile & 4K Responsiveness
+//
+
+.notOnMobile {
+  display:block;
+}
 
 .onlyOnMobile{
   display: none;
@@ -680,7 +768,11 @@ footer {
 }
 
 // phones & tablets
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
+  .notOnMobile{
+    display: none;
+  }
+
   .onlyOnMobile{
     display: block;
   }
@@ -805,6 +897,26 @@ footer {
   .titleContainer {
     .gameTitle {
       font-size: $fontSize * 3;
+    }
+  }
+
+  // For Gallery in Art page
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    
+    .wide, .tall, .large {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .gallery-item {
+      min-width: 90%;
+      max-height: 400px;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 }
