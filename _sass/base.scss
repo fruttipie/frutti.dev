@@ -60,7 +60,13 @@ img, video {
 }
 
 h1 {
-  font-size: $fontSize * 2.75;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -436,6 +442,10 @@ nav {
     font-size: $fontSize * 1.25;
     line-height: 2rem;
 
+    h2 {
+      font-size: 2rem;
+    }
+
     li {
       margin-left: 2rem;
     }
@@ -683,8 +693,28 @@ footer {
     aspect-ratio: 1 / 1;
   }
 
+  .twoByThree {
+    grid-column: span 3;
+    grid-row: span 2;
+    aspect-ratio: 3 / 2;
+  }
+
+  .huge {
+    grid-column: span 4;
+    grid-row: span 2;
+    aspect-ratio: 2 / 1;
+  }
+
   .wide, .large {
     padding: 5%;
+  }
+
+  .twoByThree {
+    padding: 3%;
+  }
+
+  .huge {
+    padding: 2.5%;
   }
 }
 
@@ -711,6 +741,16 @@ footer {
   figcaption {
     display: none;
   }
+}
+
+.gallery-text {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  padding: 10%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: left;
+  align-content: center;
 }
 
   // Lightbox 
@@ -761,14 +801,41 @@ footer {
   display: none;
 }
 
-// Giant monitors
+// 2k monitors
 @media screen and (min-width: 2000px) {
   html {
     font-size: 1.25rem;
   }
 
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
   .designProcessItem {
     flex-basis: 100%;
+  }
+
+  .gallery-text {
+  font-size: 1.5rem;
+  }
+}
+
+//4k monitors
+@media screen and (min-width: 3500px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+  
+  html {
+    font-size: 2rem;
   }
 }
 
@@ -870,6 +937,45 @@ footer {
   #bottomLinks {
     display: flex;
   }
+
+  .gallery-text {
+    font-size: 0.75rem;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  // For Gallery in Art page
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    
+    .wide, .tall, .large, .twoByThree, .huge {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .gallery-item {
+      min-width: 90%;
+      max-height: 400px;
+      padding: 5%;
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+    .gallery-text {
+      font-size: 1.5rem;
+      align-content: normal;
+      grid-column: span 1;
+      grid-row: span 1;
+      aspect-ratio: auto;
+      box-sizing: content-box;
+      padding: 5%;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -902,26 +1008,6 @@ footer {
   .titleContainer {
     .gameTitle {
       font-size: $fontSize * 3;
-    }
-  }
-
-  // For Gallery in Art page
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    
-    .wide, .tall, .large {
-      grid-column: span 1;
-      grid-row: span 1;
-    }
-
-    .gallery-item {
-      min-width: 90%;
-      max-height: 400px;
-
-      &:hover {
-        transform: none;
-      }
     }
   }
 }
